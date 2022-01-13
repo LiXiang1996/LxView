@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.example.lxview.myFreeView.ViewGroup.MyViewGroup
+        android:id="@+id/my_view_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Btn  wrap/wrap"
+            android:padding="@dimen/dp_10"
+            android:background="@color/im_msg_bg_green"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="text 100dp/wrap"
+            android:background="@color/im_msg_bg_green"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:text="text wrap/100dp"
+            android:gravity="center"
+            android:background="@color/im_msg_bg_green"
+            />
+
+    </com.example.lxview.myFreeView.ViewGroup.MyViewGroup>
+
+</LinearLayout>

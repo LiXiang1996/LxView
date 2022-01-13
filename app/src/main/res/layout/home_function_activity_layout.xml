@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:contentInsetStart="0dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginStart="12dp"
+            android:drawableStart="@mipmap/icon_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="back"
+            android:textColor="@color/black"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="Title"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12sp"
+            android:padding="8dp"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:text="right"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_right_text_next"
+            android:layout_width="54dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12sp"
+            android:gravity="center"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:text="Next"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toolbar_right_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="18dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:scaleType="fitCenter"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        style="@style/MatchWrap"
+        android:id="@+id/home_function_rv"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Share_to_">Share to </string>
+    <string name="Copy_Success">Copy Success</string>
+    <string name="Messenger">Messenger</string>
+    <string name="Instagram">Instagram</string>
+    <string name="Whatsapp">Whatsapp</string>
+    <string name="Snapchat">Snapchat</string>
+    <string name="Message">Message</string>
+    <string name="More">More</string>
+    <string name="Copy_link">Copy link</string>
+    <string name="Select_App">Select App</string>
+    <string name="Facebook">Facebook</string>
+    <string name="line">line</string>
+    <string name="No_">No %1$s</string>
+
+
+</resources>

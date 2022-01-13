@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="im_msg_bg_green">#FF3EC093</color>
+
+
+    <color name="color_3d3d3d">#3d3d3d</color>
+    <color name="white">#ffffff</color>
+    <color name="color_A6ACBF">#A6ACBF</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_333543">#333543</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_66000000">#66000000</color>
+    <color name="color_b29b9b9b">#b29b9b9b</color>
+    <color name="color_9b9b9b">#9b9b9b</color>
+    <color name="color_d8d8d8">#D8D8D8</color>
+    <color name="color_e7e7ed">#e7e7ed</color>
+    <color name="color_ededed">#ededed</color>
+    <color name="color_cdced1">#cdced1</color>
+    <color name="color_e9e9e9">#e9e9e9</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_6bc445">#6bc445</color>
+    <color name="color_a6acbf">#a6acbf</color>
+    <color name="color_0f1c2b">#0f1c2b</color>
+    <color name="color_ff5308">#ff5308</color>
+    <color name="color_b3b3b3">#b3b3b3</color>
+    <color name="color_018bd0">#018bd0</color>
+    <color name="color_ff3a3a">#ff3a3a</color>
+    <color name="color_ff5e5e">#ff5e5e</color>
+    <color name="color_66ffffff">#66ffffff</color>
+    <color name="color_b3ffffff">#b3ffffff</color>
+    <color name="color_4dffffff">#4dffffff</color>
+    <color name="color_6f6f6f">#6f6f6f</color>
+    <color name="color_f2f2f7">#f2f2f7</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_d5d6d8">#d5d6d8</color>
+    <color name="color_7a7a7a">#7a7a7a</color>
+    <color name="color_fff6e6">#fff6e6</color>
+    <color name="color_ff8900">#ff8900</color>
+    <color name="color_fefefa">#FEFEFA</color>
+    <color name="color_00000000">#00000000</color>
+    <color name="color_grey_999999">#999999</color>
+    <color name="color_e8e8e8">#e8e8e8</color>
+    <color name="color_ff3f5a">#ff3f5a</color>
+    <color name="color_a1a8bb">#a1a8bb</color>
+    <color name="color_40b544">#40b544</color>
+    <color name="color_4c131313">#4c131313</color>
+    <color name="color_f0f0f0">#f0f0f0</color>
+    <color name="color_8c9b9b9b">#8c9b9b9b</color>
+    <color name="color_fea30f">#fea30f</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_1446BD">#1446BD</color>
+    <color name="color_4c76f3">#4c76f3</color>
+    <color name="color_686868">#686868</color>
+    <color name="color_ff5959">#FF5959</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="color_c1c2c6">#c1c2c6</color>
+    <color name="color_aaaaaa">#aaaaaa</color>
+    <color name="color_c5c5c7">#c5c5c7</color>
+    <color name="color_454545">#454545</color>
+    <color name="color_212121">#212121</color>
+    <color name="color_bababa">#bababa</color>
+    <color name="color_3b000000">#3B000000</color>
+    <color name="color_12000000">#12000000</color>
+    <color name="color_ff1616">#FF1616</color>
+    <color name="color_feecb2">#feecb2</color>
+    <color name="color_ff4e50">#ff4e50</color>
+    <color name="color_f78338">#f78338</color>
+    <color name="color_a2a8bb">#a2a8bb</color>
+    <color name="challenge_ranking_dialog_topic_unselected_color">#A6ACBF</color>
+    <color name="challenge_ranking_dialog_topic_selected_color">#333333</color>
+
+
+    <color name="com_facebook_button_background_color_focused_disabled">#4476f1</color>
+    <color name="com_facebook_button_background_color_focused">#4476f1</color>
+    <color name="com_facebook_button_border_color_focused">#4476f1</color>
+
+    <color name="bottom_navigation_game_special_color">@color/color_1446BD</color>
+
+    <!-- 这里存储新版本的颜色标准 -->
+    <!--app黑色主背景-->
+    <color name="common_new_main_tone_0d0e18">#0d0e18</color>
+    <!--app主色调-->
+    <color name="common_new_main_tone_fea30f">#fea30f</color>
+    <!--app警告/辅助颜色-->
+    <!--app主题文字颜色-->
+    <color name="common_new_main_subject_text_333333">@color/color_333333</color>
+    <!--app辅助文字颜色-->
+    <color name="common_new_main_auxiliary_text_7a7a7a">#7a7a7a</color>
+    <!--app提示文字颜色-->
+    <color name="common_new_main_prompt_text_c1c2c6">#c1c2c6</color>
+    <!--app线段颜色-->
+    <color name="common_new_main_line_text_eeeeee">#eeeeee</color>
+    <!--设置页面选择按钮选中颜色-->
+    <color name="common_new_main_line_text_E9E9EB">#E9E9EB</color>
+    <!--设置页面选择按钮选中颜色-->
+    <color name="common_new_main_line_text_FF9F0A">#FF9F0A</color>
+
+    <color name="color_0493FE">#0493FE</color>
+    <color name="color_FFFCA10D">#FFFCA10D</color>
+
+</resources>

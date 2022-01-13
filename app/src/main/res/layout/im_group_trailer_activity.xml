@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFF5F7F9"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/im_group_trailer_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:src="@drawable/icon_wallet_info_input_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/im_group_trailer_delete_icon"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:src="@mipmap/im_group_trailer_delete_icon"
+        android:layout_marginEnd="11dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/im_group_trailer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="活动创建"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="42dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="14dp"
+        android:textColor="@color/black"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/im_group_trailer_content_edit"
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:textSize="14sp"
+        android:hint="请输入内容"
+        android:padding="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="19dp"
+        android:textColor="@color/black"
+        android:background="#FFFFFFFF"
+        android:gravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/im_group_trailer_title"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/im_group_trailer_content_edit_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        tools:text="0/2000"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@id/im_group_trailer_content_edit"
+        app:layout_constraintBottom_toBottomOf="@id/im_group_trailer_content_edit" />
+
+    <RelativeLayout
+        android:id="@+id/im_group_trailer_time_rl"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:background="#FFFFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/im_group_trailer_content_edit"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/im_group_trailer_time_icon"
+            android:layout_margin="16dp"
+            android:src="@mipmap/im_group_trailer_icon"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/im_group_trailer_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_toEndOf="@id/im_group_trailer_time_icon"
+            android:ellipsize="end"
+            android:maxWidth="280dp"
+            android:maxLines="1"
+            android:text="自定义时间选择器"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/im_group_trailer_time_arrow"
+            android:layout_margin="16dp"
+            android:src="@drawable/icon_setting_arrow"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/system_time_picker"
+        android:layout_marginTop="30dp"
+        android:background="#fea30f"
+        android:text="系统时间选择器"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_group_trailer_time_rl"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:background="#fea30f"
+        android:id="@+id/system_date_picker"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="10dp"
+        android:text="系统日期选择器"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/system_time_picker"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/im_group_trailer_create_rl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#fea30f"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:id="@+id/im_group_trailer_create_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

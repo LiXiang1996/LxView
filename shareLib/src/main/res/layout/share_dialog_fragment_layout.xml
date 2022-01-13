@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mShareSelectDialogBg"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/common_pop_share_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/common_color_ffffff_radius_tl8_tr8_shape"
+        android:paddingStart="23dp"
+        android:paddingEnd="23dp"
+        android:paddingBottom="38dp">
+
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/ic_share_custom_dialog_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/common_pop_share_tv_title"
+                style="@style/WrapWrap"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="18dp"
+                android:textColor="@color/color_333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/user_personal_info_common_line"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
+
+        <HorizontalScrollView
+            style="@style/WrapWrap"
+            android:scrollbars="none">
+
+            <LinearLayout
+                style="@style/WrapWrap.Horizontal"
+                android:orientation="horizontal">
+
+                <!--Facebook-->
+                <LinearLayout
+                    android:id="@+id/share_facebook"
+                    style="@style/ShareDialogLayoutStyle">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/share_ic_share_facebook" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:text="Facebook" />
+                </LinearLayout>
+
+                <!--Messenger-->
+                <LinearLayout
+                    android:id="@+id/share_messager"
+                    style="@style/ShareDialogLayoutStyle"
+                    android:layout_marginStart="43dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/share_ic_share_messenger" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:text="Messenger" />
+                </LinearLayout>
+
+                <!--message-->
+                <LinearLayout
+                    android:id="@+id/share_messages"
+                    style="@style/ShareDialogLayoutStyle"
+                    android:layout_marginStart="43dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/share_ic_share_messages" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:text="Message" />
+                </LinearLayout>
+
+                <!--WhatsApp-->
+                <LinearLayout
+                    android:id="@+id/share_whatapp"
+                    style="@style/WrapWrap.Vertical"
+                    android:layout_marginStart="43dp"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/share_ic_share_whatapp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:text="Whatsapp" />
+                </LinearLayout>
+
+                <!--snapchat-->
+                <LinearLayout
+                    android:id="@+id/share_snapchat"
+                    style="@style/ShareDialogLayoutStyle"
+                    android:layout_marginStart="43dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/share_ic_share_snapchat" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:text="Snapchat" />
+                </LinearLayout>
+
+                <!--instagram-->
+                <LinearLayout
+                    android:id="@+id/share_instagram"
+                    style="@style/ShareDialogLayoutStyle"
+                    android:layout_marginStart="43dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/share_ic_share_instagram" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:text="Instagram" />
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            style="@style/WrapWrap"
+            android:layout_marginTop="27dp"
+            android:scrollbars="none">
+
+            <LinearLayout style="@style/WrapWrap.Horizontal">
+
+                <LinearLayout
+                    android:id="@+id/share_copy_link"
+                    style="@style/ShareDialogLayoutStyle"
+                    android:layout_marginEnd="43dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/ic_share_new_share_downloadic_copylink" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:gravity="center"
+                        android:text="Copy_link" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/share_download"
+                    style="@style/ShareDialogLayoutStyle"
+                    android:layout_marginEnd="43dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/ic_share_new_share_download" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:text="Download" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/share_more"
+                    style="@style/ShareDialogLayoutStyle">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/ShareDialogImageStyle"
+                        android:src="@mipmap/ic_share_new_share_more" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/ShareDialogTextStyle"
+                        android:text="More" />
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

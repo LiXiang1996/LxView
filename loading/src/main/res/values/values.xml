@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZJJ_loading</string>
+    <style name="mProgress_circle">
+        <item name="android:minWidth">20dp</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxWidth">100dp</item>
+        <item name="android:maxHeight">100dp</item>
+    </style>
+    <declare-styleable name="BaseLoadingView">
+        <attr format="color|reference" name="backgroundFill"/>
+        <attr format="color|reference" name="backgroundUnderTheContent"/>
+        <attr format="reference" name="loadingRes"/>
+        <attr format="reference" name="noDataRes"/>
+        <attr format="reference" name="noNetworkRes"/>
+        <attr format="color|reference" name="hintColor"/>
+        <attr format="color|reference" name="refreshTextColor"/>
+        <attr format="string" name="loadingText"/>
+        <attr format="string" name="noDataText"/>
+        <attr format="string" name="networkErrorText"/>
+        <attr format="string" name="refreshNetworkText"/>
+        <attr format="integer" name="changeAnimDuration"/>
+        <attr format="dimension" name="maxRefreshTextWidth"/>
+        <attr format="integer" name="maxRefreshTextLines"/>
+        <attr format="dimension" name="maxHintTextWidth"/>
+        <attr format="integer" name="maxHintTextLines"/>
+        <attr format="string" name="refreshNoDataText"/>
+        <attr format="enum" name="shownMode">
+            <enum name="overlap" value="0"/>
+            <enum name="floating" value="1"/>
+            <enum name="fo" value="2"/>
+        </attr>
+        <attr format="color|reference" name="btnBackground"/>
+        <attr format="color|reference" name="btnTextColor"/>
+        <attr format="string|reference" name="btnText"/>
+        <attr format="boolean" name="btnEnable"/>
+        <attr format="boolean" name="refreshEnable"/>
+        <attr format="dimension" name="btnTextSize"/>
+        <attr format="dimension" name="refreshTextSize"/>
+        <attr format="dimension" name="hintTextSize"/>
+
+        <attr format="dimension" name="drawerWidth"/>
+        <attr format="dimension" name="drawerHeight"/>
+        <attr format="enum" name="modeDefault">
+            <enum name="LOADING" value="1"/>
+            <enum name="NO_DATA" value="2"/>
+            <enum name="NET_WORK_ERROR" value="3"/>
+        </attr>
+    </declare-styleable>
+</resources>
