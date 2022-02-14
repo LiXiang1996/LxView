@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WrapWrap.Vertical"
+    android:background="@drawable/common_loading_bg_shape">
+
+    <LinearLayout
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/volume_image_tip"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="23dp"
+            android:src="@mipmap/ic_launcher_round"
+            />
+
+
+        <ProgressBar
+            android:id="@+id/volume_progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp"
+            android:max="100"
+            android:tooltipText="进度条"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_4"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/volume_tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="取消"
+                android:textColor="@color/color_ffffff"
+                android:gravity="center"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/volume_tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/color_ffffff"
+                android:text="确认"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

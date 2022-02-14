@@ -6,6 +6,7 @@ import com.example.lxview.myFreeView.activity.ExOneActivity
 import com.example.lxview.R
 import com.example.lxview.myFreeView.activity.SampleActivity
 import com.example.lxview.base.BaseActivity
+import com.example.lxview.base.activity.SampleDialogAndPopActivity
 import com.example.lxview.function.home.activity.HomeFunctionActivity
 import com.example.lxview.listTimestamp.activity.ListTimeActivity
 import com.example.lxview.timePicker.activity.TimePickerActivity
@@ -22,7 +23,8 @@ class HomeActivity : BaseActivity() {
     var tv3: AppCompatTextView? = null
     var tv4: AppCompatTextView? = null
     var tv5: AppCompatTextView? = null
-    var tv6: AppCompatTextView? = null
+    private var tv6: AppCompatTextView? = null
+    var tv7: AppCompatTextView? = null
     override val contentId: Int
         get() = R.layout.home_activity_layout
 
@@ -34,6 +36,7 @@ class HomeActivity : BaseActivity() {
         tv4 = findViewById(R.id.home_system_time_picker)
         tv5 = findViewById(R.id.home_system_date_picker)
         tv6 = findViewById(R.id.home_function)
+        tv7 = findViewById(R.id.home_dialog_and_pop)
     }
 
     override fun initData() {
@@ -52,6 +55,10 @@ class HomeActivity : BaseActivity() {
         tv6?.setOnClickListener {
             this.startActivity(Intent(this, HomeFunctionActivity::class.java))
         }
+        tv7?.setOnClickListener {
+            this.startActivity(Intent(this, SampleDialogAndPopActivity::class.java))
+        }
+
     }
 
 

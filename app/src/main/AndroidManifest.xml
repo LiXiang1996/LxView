@@ -26,6 +26,7 @@
         <activity android:name=".listTimestamp.activity.ListTimeActivity"/>
         <activity android:name=".timePicker.activity.TimePickerActivity"/>
         <activity android:name=".function.home.activity.HomeFunctionActivity"/>
+        <activity android:name=".base.activity.SampleDialogAndPopActivity"/>
     </application>
 
 </manifest>
