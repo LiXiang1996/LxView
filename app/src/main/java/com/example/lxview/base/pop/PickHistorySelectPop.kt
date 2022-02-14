@@ -1,13 +1,11 @@
 package com.example.lxview.base.pop
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.graphics.drawable.ColorDrawable
 import android.view.*
 import android.widget.PopupWindow
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.lxview.R
-
 
 @SuppressLint("InflateParams")
 class PickHistorySelectPop private constructor(v: View, val listener: (Int?) -> Unit?, private val focusAble: Boolean = true) {
@@ -15,11 +13,9 @@ class PickHistorySelectPop private constructor(v: View, val listener: (Int?) -> 
     var popWindow: PopupWindow? = null
 
     companion object {
-
         fun show(v: View, focusAble: Boolean? = true, listener: (Int?) -> Unit?): PickHistorySelectPop {
             return PickHistorySelectPop(v, listener, focusAble ?: true)
         }
-
     }
 
     private lateinit var replied: AppCompatTextView
