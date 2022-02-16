@@ -27,6 +27,8 @@
         <activity android:name=".timePicker.activity.TimePickerActivity"/>
         <activity android:name=".function.home.activity.HomeFunctionActivity"/>
         <activity android:name=".base.activity.SampleDialogAndPopActivity"/>
+        <activity android:name=".jetpack.navigation.MyNavigationActivity"/>
+        <activity android:name=".jetpack.MyJetPackActivity"/>
     </application>
 
 </manifest>

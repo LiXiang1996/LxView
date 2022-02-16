@@ -16,44 +16,48 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/sample_alert_dialog_easy"
+            android:id="@+id/jetpack_livedata"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@color/im_msg_bg_green"
             android:padding="@dimen/dp_10"
-            android:text="系统AlertDialog" />
+            android:gravity="center_horizontal"
+            android:text="LiveData" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/sample_alertdialog_define"
+            android:id="@+id/jetpack_lifecycle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@color/im_msg_bg_green"
             android:padding="@dimen/dp_10"
-            android:text="自定义AlertDialog" />
+            android:gravity="center_horizontal"
+            android:text="LifeCycle" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/sample_dialog_easy"
+            android:id="@+id/jetpack_databinding"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@color/im_msg_bg_green"
             android:padding="@dimen/dp_10"
-            android:text="自定义Dialog" />
+            android:gravity="center_horizontal"
+            android:text="DataBinding" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/sample_pop_easy"
+            android:id="@+id/jetpack_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@color/im_msg_bg_green"
             android:padding="@dimen/dp_10"
-            android:text="自定义PopWindow" />
+            android:gravity="center_horizontal"
+            android:text="Navigation" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/sample_dialog_view_loading"
