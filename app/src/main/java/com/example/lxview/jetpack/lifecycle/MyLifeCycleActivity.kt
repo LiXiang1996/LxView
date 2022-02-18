@@ -6,6 +6,7 @@ import android.os.IBinder
 import android.os.PersistableBundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.lifecycle.*
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +31,7 @@ class MyLifeCycleActivity : AppCompatActivity(), RequestListDelegate<ItemBean> {
     private val requestListHelper = RequestListHelper(this)
     private val myLocationListener = MyPlayListener2()
     val list = mutableListOf<ItemBean>()
+    val list2 = mutableListOf<Int>()
     var i = 0
 
 
@@ -61,11 +63,19 @@ class MyLifeCycleActivity : AppCompatActivity(), RequestListDelegate<ItemBean> {
         tvAdd.setOnClickListener {
             val mTestViewModel = ViewModelProviders.of(this@MyLifeCycleActivity).get(MyLifeTestViewModel::class.java) //不带参数
             i += 1
-            mTestViewModel.getNameEvent().value = i.toString()
+            mTestViewModel.getNameEvent().value = i.toString()+"只羊"
         }
         tvExit.setOnClickListener {
             finish()
         }
+
+        list2.add(0,R.drawable.yang_1)
+        list2.add(1,R.drawable.yang_2)
+        list2.add(2,R.drawable.yang_3)
+        list2.add(3,R.drawable.yang_4)
+        list2.add(4,R.drawable.yang_5)
+        list2.add(5,R.drawable.yang_6)
+        list2.add(6,R.drawable.yang_7)
 
     }
 
@@ -107,6 +117,9 @@ class MyLifeCycleActivity : AppCompatActivity(), RequestListDelegate<ItemBean> {
     override fun bind(holder: RecyclerView.ViewHolder, position: Int, data: ItemBean) {
         with(holder.itemView) {
             val tv: AppCompatTextView = findViewById(R.id.life_item_text)
+            val img: AppCompatImageView = findViewById(R.id.life_item_img)
+            val k = (0 until 7).random()
+            img.setImageResource(list2[k])
             tv.text = data.introduction
         }
     }

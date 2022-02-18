@@ -5,13 +5,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/life_item_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/yang_1"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/life_item_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/life_item_text"
+        android:layout_marginTop="@dimen/dp_10"
+/>
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/life_item_text"
         android:layout_marginTop="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/life_item_img"
         android:gravity="center_horizontal"
         tool:text="@string/test_text"/>
 

@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:text="Add"
+        android:text="数羊"
         android:background="@color/teal_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,6 +23,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/jetpack_lifecycle_tv_exit"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
+        android:text="睡不着觉？"
+        android:background="@color/teal_200"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/jetpack_lifecycle_tv_exit"
+        app:layout_constraintEnd_toStartOf="@id/jetpack_lifecycle_tv_add"
+        android:id="@+id/jetpack_lifecycle_tv_title"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/jetpack_lifecycle_rv"
