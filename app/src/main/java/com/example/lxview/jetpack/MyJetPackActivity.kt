@@ -1,8 +1,12 @@
 package com.example.lxview.jetpack
 
 import androidx.appcompat.widget.AppCompatTextView
+import com.example.baselib.utils.startAct
 import com.example.lxview.R
 import com.example.lxview.base.BaseActivity
+import com.example.lxview.jetpack.lifecycle.MyLifeCycleActivity
+import com.example.lxview.jetpack.livedata.MyLivedataActivity
+import com.example.lxview.jetpack.navigation.MyNavigationActivity
 
 /**
  * author: 李 祥
@@ -17,7 +21,7 @@ class MyJetPackActivity : BaseActivity() {
     var tv5: AppCompatTextView? = null
 
     override val contentId: Int
-        get() = R.layout.navigation_layout
+        get() = R.layout.jetpack_activity_layout
 
 
     override fun initView() {
@@ -28,11 +32,15 @@ class MyJetPackActivity : BaseActivity() {
     }
 
     override fun initListener() {
-        tvLivedataActivity?.setOnClickListener { }
-        tvLifecycleActivity?.setOnClickListener { }
+        tvLivedataActivity?.setOnClickListener {
+            startAct<MyLivedataActivity>()
+        }
+        tvLifecycleActivity?.setOnClickListener {
+            startAct<MyLifeCycleActivity>()
+        }
         tvDataBindingActivity?.setOnClickListener { }
         tvNavigationActivity?.setOnClickListener {
-
+            startAct<MyNavigationActivity>()
         }
     }
 }

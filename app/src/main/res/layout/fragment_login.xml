@@ -6,6 +6,8 @@
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
     android:gravity="center_horizontal"
+    android:background="@color/teal_200"
+
     >
 
     <TextView
@@ -13,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_40"
         android:padding="@dimen/dp_10"
-        android:text="@string/hello_blank_fragment" />
+        android:text="欢迎加入菜鸟的世界～" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="@dimen/dp_40"

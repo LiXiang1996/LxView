@@ -1,10 +1,8 @@
 package com.example.lxview.jetpack.lifecycle
 
 import android.util.Log
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.OnLifecycleEvent
-
-import androidx.lifecycle.LifecycleObserver
+import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.*
 
 
 /**
@@ -13,6 +11,7 @@ import androidx.lifecycle.LifecycleObserver
  * description:
  */
 class MyPlayListener : LifecycleObserver {
+
     /**
      * LifeCycle 有三种实现方法：
      *LifecycleObserver 配合 @OnLifecycleEvent 注解
@@ -20,17 +19,17 @@ class MyPlayListener : LifecycleObserver {
      *LifecycleEventObserver 将宿主生命周期事件封装成 Lifecycle.Event
      */
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    private fun initVideo() {
+     fun initVideo() {
         Log.d(TAG, "initVideo")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-    private fun startPlay() {
+     fun startPlay() {
         Log.d(TAG, "startPlay")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    private fun pausePlay() {
+     fun pausePlay() {
         Log.d(TAG, "pausePlay")
     }
 

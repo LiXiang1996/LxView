@@ -1,8 +1,12 @@
 package com.example.lxview.jetpack.navigation
 
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.navigation.Navigation
 import com.example.lxview.R
 import com.example.lxview.base.BaseActivity
+
+
+
 
 /**
  * author: 李 祥
@@ -11,7 +15,10 @@ import com.example.lxview.base.BaseActivity
  */
 class MyNavigationActivity:BaseActivity() {
     override val contentId: Int
-        get() = TODO("Not yet implemented")
+        get() = R.layout.navigation_layout
 
+    override fun onSupportNavigateUp(): Boolean {
+        return Navigation.findNavController(this, R.id.nav_host_fragment).navigateUp()
+    }
 
 }

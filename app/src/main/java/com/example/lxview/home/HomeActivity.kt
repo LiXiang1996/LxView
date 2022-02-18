@@ -2,12 +2,14 @@ package com.example.lxview.home
 
 import android.content.Intent
 import androidx.appcompat.widget.AppCompatTextView
+import com.example.baselib.utils.startAct
 import com.example.lxview.myFreeView.activity.ExOneActivity
 import com.example.lxview.R
 import com.example.lxview.myFreeView.activity.SampleActivity
 import com.example.lxview.base.BaseActivity
 import com.example.lxview.base.activity.SampleDialogAndPopActivity
 import com.example.lxview.function.home.activity.HomeFunctionActivity
+import com.example.lxview.jetpack.MyJetPackActivity
 import com.example.lxview.listTimestamp.activity.ListTimeActivity
 import com.example.lxview.timePicker.activity.TimePickerActivity
 
@@ -20,11 +22,12 @@ class HomeActivity : BaseActivity() {
 
     var tv1: AppCompatTextView? = null
     var tv2: AppCompatTextView? = null
-    var tv3: AppCompatTextView? = null
+    private var tv3: AppCompatTextView? = null
     var tv4: AppCompatTextView? = null
     var tv5: AppCompatTextView? = null
     private var tv6: AppCompatTextView? = null
-    var tv7: AppCompatTextView? = null
+    private var tv7: AppCompatTextView? = null
+    var tvJetPackModule: AppCompatTextView? = null
     override val contentId: Int
         get() = R.layout.home_activity_layout
 
@@ -37,6 +40,7 @@ class HomeActivity : BaseActivity() {
         tv5 = findViewById(R.id.home_system_date_picker)
         tv6 = findViewById(R.id.home_function)
         tv7 = findViewById(R.id.home_dialog_and_pop)
+        tvJetPackModule = findViewById(R.id.home_jetpack)
     }
 
     override fun initData() {
@@ -52,11 +56,18 @@ class HomeActivity : BaseActivity() {
         tv3?.setOnClickListener {
             this.startActivity(Intent(this, TimePickerActivity::class.java))
         }
+        tv4?.setOnClickListener {
+            this.startActivity(Intent(this, ListTimeActivity::class.java))
+        }
+
         tv6?.setOnClickListener {
             this.startActivity(Intent(this, HomeFunctionActivity::class.java))
         }
         tv7?.setOnClickListener {
             this.startActivity(Intent(this, SampleDialogAndPopActivity::class.java))
+        }
+        tvJetPackModule?.setOnClickListener {
+            startAct<MyJetPackActivity>()
         }
 
     }

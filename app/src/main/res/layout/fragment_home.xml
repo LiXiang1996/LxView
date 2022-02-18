@@ -13,20 +13,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_40"
         android:padding="@dimen/dp_10"
-        android:text="@string/hello_blank_fragment" />
+        android:text="第一个Fragment" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="@dimen/dp_40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="按钮一"
-        android:id="@+id/nav_fragment_btn1"/>
+        android:text="跳去Login"
+        android:id="@+id/nav_first_fragment_btn1"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="@dimen/dp_40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="按钮二"
-        android:id="@+id/nav_fragment_btn2"/>
+        android:text="Exit"
+        android:id="@+id/nav_first_fragment_btn2"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

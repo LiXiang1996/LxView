@@ -16,14 +16,16 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
+ * Use the [FirstFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class HomeFragment : Fragment() {
+class FirstFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private var btnToLoginFragment:AppCompatButton?=null
+    private var btnToLoginFragment: AppCompatButton? = null
+    private var btnToExit: AppCompatButton? = null
+    lateinit var mRootView: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,15 +34,20 @@ class HomeFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
-        btnToLoginFragment?.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
-        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? { // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        mRootView = inflater.inflate(R.layout.fragment_home, container, false)
+        btnToLoginFragment =mRootView.findViewById<AppCompatButton>(R.id.nav_first_fragment_btn1)
+        btnToExit =mRootView.findViewById<AppCompatButton>(R.id.nav_first_fragment_btn2)
+        btnToLoginFragment?.setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_loginFragment)
+        }
+        btnToExit?.setOnClickListener {
+            activity?.finish()
+        }
+        return mRootView
     }
-
 
     companion object {
         /**
@@ -49,10 +56,10 @@ class HomeFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
+         * @return A new instance of fragment FirstFragment.
          */ // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) = HomeFragment().apply {
+        fun newInstance(param1: String, param2: String) = FirstFragment().apply {
             arguments = Bundle().apply {
                 putString(ARG_PARAM1, param1)
                 putString(ARG_PARAM2, param2)

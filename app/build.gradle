@@ -52,8 +52,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.12.0'
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
-    implementation project(':wheelview')
-    implementation project(':shareLib')
+
 
     //lifecycle
     implementation 'com.trello:rxlifecycle-kotlin:1.0'
@@ -66,10 +65,13 @@ dependencies {
     implementation "android.arch.lifecycle:livedata:1.1.1"
 
     def nav_version = "2.3.2"
-
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
 
+
+    implementation project(':wheelview')
+    implementation project(':shareLib')
+    implementation project(':baseLib')
 }

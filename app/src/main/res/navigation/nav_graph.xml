@@ -3,20 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/firstFragment">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.lxview.jetpack.navigation.HomeFragment"
+        android:id="@+id/firstFragment"
+        android:name="com.example.lxview.jetpack.navigation.FirstFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_loginFragment"
+            android:id="@+id/action_firstFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.lxview.jetpack.navigation.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+
+    </fragment>
 </navigation>

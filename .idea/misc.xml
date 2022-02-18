@@ -26,6 +26,8 @@
         <entry key="app/src/main/res/layout/item_indicator.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/jetpack_activity_layout.xml" value="0.28958333333333336" />
+        <entry key="app/src/main/res/layout/jetpack_lifecycle_activity_item_layout.xml" value="0.28958333333333336" />
+        <entry key="app/src/main/res/layout/jetpack_lifecycle_activity_layout.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/layout_basepickerview.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/list_item_common.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/list_timechuo_activity_layout.xml" value="0.31614583333333335" />

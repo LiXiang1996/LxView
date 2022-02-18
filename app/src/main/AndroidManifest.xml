@@ -29,6 +29,8 @@
         <activity android:name=".base.activity.SampleDialogAndPopActivity"/>
         <activity android:name=".jetpack.navigation.MyNavigationActivity"/>
         <activity android:name=".jetpack.MyJetPackActivity"/>
+        <activity android:name=".jetpack.lifecycle.MyLifeCycleActivity"/>
+        <activity android:name=".jetpack.livedata.MyLivedataActivity"/>
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ import com.example.lxview.listTimestamp.adapter.TimeStampAdapter;
 /**
  * author: 李 祥
  * date:   2021/9/27 1:55 下午
- * description:
+ * description: 时间戳列表
  */
 public class ListTimeActivity extends AppCompatActivity {
 
