@@ -53,7 +53,7 @@
             android:layout_margin="10dp"
             android:background="@color/im_msg_bg_green"
             android:padding="@dimen/dp_10"
-            android:text="系统TImePiker" />
+            android:text="待定" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/home_system_date_picker"
@@ -63,7 +63,7 @@
             android:layout_margin="10dp"
             android:background="@color/im_msg_bg_green"
             android:padding="@dimen/dp_10"
-            android:text="系统datePiker" />
+            android:text="待定" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/home_function"

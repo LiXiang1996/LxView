@@ -33,7 +33,7 @@ class MyJetPackActivity : BaseActivity() {
 
     override fun initListener() {
         tvLivedataActivity?.setOnClickListener {
-            startAct<MyLivedataActivity>()
+            startAct<MyLifeCycleActivity>()
         }
         tvLifecycleActivity?.setOnClickListener {
             startAct<MyLifeCycleActivity>()

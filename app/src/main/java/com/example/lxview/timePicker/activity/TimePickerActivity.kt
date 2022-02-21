@@ -1,10 +1,16 @@
 package com.example.lxview.timePicker.activity
 
 import android.annotation.SuppressLint
+import android.app.DatePickerDialog
+import android.app.ProgressDialog
+import android.app.TimePickerDialog
+import android.os.Handler
+import android.os.Message
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
@@ -16,6 +22,7 @@ import com.example.lxview.timePicker.view.TimePickerView
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 /**
  * author: 李 祥
@@ -34,23 +41,32 @@ class TimePickerActivity : BaseActivity(), OnTimeSelectListener {
     private var trailerIconDelete: AppCompatImageView? = null
     private var trailerTextCount: AppCompatTextView? = null
     private var trailerTimeText: AppCompatTextView? = null
+    private var timePikerSystem: AppCompatTextView? = null
+    private var datePikerSystem: AppCompatTextView? = null
+    private var defineDatePikerSystem: AppCompatTextView? = null
+    private var progressSystem: AppCompatTextView? = null
     private var trailerTipsText: AppCompatTextView? = null
     private var trailerCreateText: AppCompatTextView? = null
     private var trailerCreateRl: RelativeLayout? = null
     private var trailerTimeRl: RelativeLayout? = null
     private var pvTime: TimePickerView? = null
     private var onSelectTime: Long? = null
+    private var progressDialog: ProgressDialog? = null
+    var mHandler: Handler? = null
 
     override val contentId: Int
         get() = R.layout.im_group_trailer_activity
 
     override fun initView() {
         trailerEditText = findViewById(R.id.im_group_trailer_content_edit)
+        timePikerSystem = findViewById(R.id.system_time_picker)
+        datePikerSystem = findViewById(R.id.system_date_picker)
+        defineDatePikerSystem = findViewById(R.id.define_date_picker)
+        progressSystem = findViewById(R.id.system_process)
         trailerIconBack = findViewById(R.id.im_group_trailer_back)
         trailerIconDelete = findViewById(R.id.im_group_trailer_delete_icon)
         trailerTextCount = findViewById(R.id.im_group_trailer_content_edit_count)
-        trailerTimeText = findViewById(R.id.im_group_trailer_time_tv)
-//        trailerTipsText = findViewById(R.id.im_group_trailer_tips_tv)
+        trailerTimeText = findViewById(R.id.im_group_trailer_time_tv) //        trailerTipsText = findViewById(R.id.im_group_trailer_tips_tv)
         trailerCreateText = findViewById(R.id.im_group_trailer_create_tv)
         trailerCreateRl = findViewById(R.id.im_group_trailer_create_rl)
         trailerTimeRl = findViewById(R.id.im_group_trailer_time_rl)
@@ -63,7 +79,7 @@ class TimePickerActivity : BaseActivity(), OnTimeSelectListener {
 
 
     override fun initListener() {
-        trailerEditText?.addTextChangedListener(object :TextWatcher{
+        trailerEditText?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
 
@@ -79,14 +95,81 @@ class TimePickerActivity : BaseActivity(), OnTimeSelectListener {
         trailerIconDelete?.setOnClickListener { //删除预告
 
         }
+        datePikerSystem?.setOnClickListener { //系统日期选择器
+            val calendar: Calendar = Calendar.getInstance()
+            val datePickerDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { datepicker, year, month, day ->
+                val text = "你选择了：" + year + "年" + (month + 1) + "月" + day + "日"
+                trailerTimeText?.text = text
+                Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+            }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show()
+        }
+        timePikerSystem?.setOnClickListener { //系统日期选择器
+            val calendar = Calendar.getInstance()
+            TimePickerDialog(this, { timepicker, hourOfDay, minute ->
+                val text = "你选择了" + hourOfDay + "时" + minute + "分"
+                trailerTimeText?.text = text
+                Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+            }, calendar[Calendar.HOUR_OF_DAY], calendar[Calendar.MINUTE], true).show()
+        }
         trailerIconBack?.setOnClickListener { //返回上一级
             finish()
         }
+
         trailerTimeRl?.setOnClickListener { //时间选择器
             if (pvTime != null) pvTime?.show(it)
         }
 
+        defineDatePikerSystem?.setOnClickListener { //时间选择器
+            if (pvTime != null) pvTime?.show(it)
+        }
+        progressSystem?.setOnClickListener { //时间选择器
+            showDialog()
+        }
+
+        mHandler = @SuppressLint("HandlerLeak") object : Handler() {
+            override fun handleMessage(msg: Message) {
+                when (msg.what) {
+                    0 -> {
+                        progressDialog?.dismiss()
+                    }
+                    1->{
+                        progressDialog?.progress = msg.arg1
+                    }
+                }
+            }
+        }
+
     }
+
+    fun showDialog() {
+        progressDialog = ProgressDialog(this)
+        progressDialog?.setTitle("下载中>>>>")
+        progressDialog?.setMessage("请稍后")
+        progressDialog?.setCancelable(true)
+        progressDialog?.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL)
+        progressDialog?.max = 100
+        progressDialog?.show()
+
+        Thread() {//三秒弹窗消失
+            var i = 0
+            run() {
+                while (i in 0..100) {
+                    i += 1
+                    try {
+                        Thread.sleep(100)
+                    } catch (e: Exception) {
+
+                    }
+                    val msg = Message()
+                    msg.arg1 =i
+                    msg.what = 1
+                    mHandler?.sendMessage(msg)
+                }
+                mHandler?.sendEmptyMessage(0)
+            }
+        }.start()
+    }
+
 
     private fun onSetNoDataView() {
         trailerCreateText?.text = "创建"
