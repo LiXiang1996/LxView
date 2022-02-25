@@ -14,8 +14,10 @@ import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.lifecycle.LifecycleOwner
 import com.example.lxview.R
 import com.example.lxview.base.BaseActivity
+import com.example.lxview.jetpack.lifecycle.sample.LifecycleHandler
 import com.example.lxview.timePicker.listener.OnTimeSelectListener
 import com.example.lxview.timePicker.utils.IMTrailerTimePickerUtils
 import com.example.lxview.timePicker.view.TimePickerView
@@ -29,7 +31,7 @@ import java.util.*
  * date:   2021/12/8 10:55 上午
  * description:
  */
-class TimePickerActivity : BaseActivity(), OnTimeSelectListener {
+class TimePickerActivity : BaseActivity(), OnTimeSelectListener,LifecycleOwner {
 
 
     companion object {
@@ -126,7 +128,8 @@ class TimePickerActivity : BaseActivity(), OnTimeSelectListener {
             showDialog()
         }
 
-        mHandler = @SuppressLint("HandlerLeak") object : Handler() {
+
+        mHandler = @SuppressLint("HandlerLeak") object : LifecycleHandler(this) {
             override fun handleMessage(msg: Message) {
                 when (msg.what) {
                     0 -> {
@@ -141,7 +144,7 @@ class TimePickerActivity : BaseActivity(), OnTimeSelectListener {
 
     }
 
-    fun showDialog() {
+    private fun showDialog() {
         progressDialog = ProgressDialog(this)
         progressDialog?.setTitle("下载中>>>>")
         progressDialog?.setMessage("请稍后")
@@ -242,5 +245,10 @@ class TimePickerActivity : BaseActivity(), OnTimeSelectListener {
         val sdr = SimpleDateFormat("yyyy-MM-dd   HH:mm   ", Locale.getDefault())
         return sdr.format(date)
     }
+
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        mHandler?.removeCallbacksAndMessages(null);
+//    }
 
 }

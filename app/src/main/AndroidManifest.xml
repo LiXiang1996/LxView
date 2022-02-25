@@ -19,18 +19,32 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".loading.activity.IndicatorActivity"/>
-        <activity android:name=".myFreeView.ViewGroup.MyViewGroupActivity"/>
-        <activity android:name=".myFreeView.activity.ExOneActivity"/>
-        <activity android:name=".myFreeView.activity.SampleActivity"/>
-        <activity android:name=".listTimestamp.activity.ListTimeActivity"/>
-        <activity android:name=".timePicker.activity.TimePickerActivity"/>
-        <activity android:name=".function.home.activity.HomeFunctionActivity"/>
-        <activity android:name=".base.activity.SampleDialogAndPopActivity"/>
-        <activity android:name=".jetpack.navigation.MyNavigationActivity"/>
-        <activity android:name=".jetpack.MyJetPackActivity"/>
-        <activity android:name=".jetpack.lifecycle.MyLifeCycleActivity"/>
-        <activity android:name=".jetpack.livedata.MyLivedataActivity"/>
+        <activity android:name=".loading.activity.IndicatorActivity" />
+        <activity android:name=".myFreeView.ViewGroup.MyViewGroupActivity" />
+        <activity android:name=".myFreeView.activity.ExOneActivity" />
+        <activity android:name=".myFreeView.activity.SampleActivity" />
+        <activity android:name=".listTimestamp.activity.ListTimeActivity" />
+        <activity android:name=".timePicker.activity.TimePickerActivity" />
+        <activity android:name=".function.home.activity.HomeFunctionActivity" />
+        <activity android:name=".base.activity.SampleDialogAndPopActivity" />
+        <activity android:name=".jetpack.navigation.MyNavigationActivity" />
+        <activity android:name=".jetpack.MyJetPackActivity" />
+        <activity android:name=".jetpack.lifecycle.MyLifeCycleActivity" />
+        <activity android:name=".jetpack.livedata.MyLivedataActivity" />
+        <activity android:name=".ipc.binder.AidlBinderActivity"/>
+        <activity android:name=".ipc.messager.client.MessengerActivity"/>
+
+        <service android:name=".RemoteService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote">
+        </service>
+
+        <service android:name=".ipc.messager.service.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote">
+        </service>
     </application>
 
 </manifest>

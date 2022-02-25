@@ -13,4 +13,13 @@
     <string name="test_text">Test_Text</string>
 
 
+    <string name="btn_bind">Bind</string>
+    <string name="btn_unbind">Unbind</string>
+    <string name="btn_kill">Kill</string>
+
+    <string name="kill_success">Killed success</string>
+    <string name="kill_failure">Killed failure</string>
+
+    <string name="binding">binding...</string>
+    <string name="unbinding">unbinding...</string>
 </resources>

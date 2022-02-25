@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp_40"
+    android:layout_gravity="center_horizontal"
+    android:padding="@dimen/dp_10"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btn_bind"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickHandler"
+        android:text="@string/btn_bind" />
+
+    <Button
+        android:id="@+id/btn_unbind"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/btn_bind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_unbind"
+        android:onClick="clickHandler"/>
+
+    <Button
+        android:id="@+id/btn_kill"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_unbind"
+        android:onClick="clickHandler"
+        android:text="@string/btn_kill" />
+
+    <TextView
+        android:id="@+id/tv_callback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/test_text"
+        android:textSize="16sp" />
+
+</RelativeLayout>

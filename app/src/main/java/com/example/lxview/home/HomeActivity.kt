@@ -9,6 +9,8 @@ import com.example.lxview.myFreeView.activity.SampleActivity
 import com.example.lxview.base.BaseActivity
 import com.example.lxview.base.activity.SampleDialogAndPopActivity
 import com.example.lxview.function.home.activity.HomeFunctionActivity
+import com.example.lxview.ipc.binder.AidlBinderActivity
+import com.example.lxview.ipc.messager.client.MessengerActivity
 import com.example.lxview.jetpack.MyJetPackActivity
 import com.example.lxview.listTimestamp.activity.ListTimeActivity
 import com.example.lxview.timePicker.activity.TimePickerActivity
@@ -57,7 +59,10 @@ class HomeActivity : BaseActivity() {
             this.startActivity(Intent(this, TimePickerActivity::class.java))
         }
         tv4?.setOnClickListener {
-            this.startActivity(Intent(this, ListTimeActivity::class.java))
+            this.startActivity(Intent(this, MessengerActivity::class.java))
+        }
+        tv5?.setOnClickListener {
+            this.startActivity(Intent(this, AidlBinderActivity::class.java))
         }
 
         tv6?.setOnClickListener {
