@@ -16,7 +16,7 @@ import java.util.*
 
 
 /**
- * Created by lx on 2018/2/28
+ * Created by lixiang on 2022/2/28
  * Glide工具类
  */
 object GlideUtils {

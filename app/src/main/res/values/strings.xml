@@ -18,8 +18,119 @@
     <string name="btn_kill">Kill</string>
 
     <string name="kill_success">Killed success</string>
+    <string name="skip">跳过</string>
+    <string name="home">首页</string>
+    <string name="tools">工具</string>
+    <string name="play">游戏</string>
+    <string name="video">视频</string>
+    <string name="mine">我的</string>
     <string name="kill_failure">Killed failure</string>
 
     <string name="binding">binding...</string>
     <string name="unbinding">unbinding...</string>
+
+
+    //Login
+<!--    <string name="app_name">UTown</string>-->
+    <string name="share_facebook_text">facebook</string>
+    <string name="share_twitter_text">Twitter</string>
+    <string name="share_whatapp_text">Whatsapp</string>
+    <string name="share_copy_link_text">Copy_link</string>
+    <string name="share_copy_success">Copy Success</string>
+    <string name="game_view_content_description">Game view</string>
+    //
+
+    <string name="login_title">欢迎来到\nUTOWN</string>
+    <string name="login_title_slogan">自由与无限可能</string>
+    <string name="login_with_wechat">微信用户登录</string>
+    <string name="login_invite_code_title">请输入您的邀请码</string>
+    <string name="login_email_code_title">请输入邮箱验证码</string>
+    <string name="login_meeting_code_title">请输入会议号</string>
+    <string name="login_setting_userinfo_title">欢迎来到UTOWN</string>
+    <string name="login_setting_userinfo_title_slogan">自由与无限可能</string>
+    <string name="login_setting_userinfo_user_name">创建一个用户名</string>
+    <string name="login_setting_userinfo_user_name_hit">希望大家怎么称呼您</string>
+    <string name="login_setting_userinfo_user_gender">请选择你的性别</string>
+    <string name="login_setting_userinfo_next">下一步</string>
+    <string name="zone_invite_login_text">登录UTOWN</string>
+    <string name="zone_invite_message_text">嗨,你好！\n "%s"邀请你加入空间 \n %s </string>
+    //
+    <string name="home_join">进入</string>
+    <string name="home_create_meeting">创建会议</string>
+    <string name="home_create_space">创建空间</string>
+    <string name="space_add_user">邀请好友</string>
+    <string name="space_setting">设置</string>
+    <string name="space_user_list">成员</string>
+    <string name="space_exit">离开空间</string>
+    <string name="create_utown_count">创建你的UTOWN账号</string>
+    <string name="input_email">电子邮箱地址</string>
+    <string name="email_verify_code">获取邮箱验证码</string>
+    <string name="email_verify_code_countdown">获取邮箱验证码(%s)</string>
+    <string name="input_password">设置密码</string>
+    <string name="input_password_again">请再次输入您的密码</string>
+    <string name="tips_email_verify">一封邮件已经发送到您的邮箱</string>
+    <string name="login">登录</string>
+    <string name="login_join_meeting">加入会议</string>
+    <string name="create_count">创建账号</string>
+    <string name="read_private_policy">查看我们的隐私政策</string>
+    <string name="welcome_back">欢迎回来</string>
+    <string name="welcome_back_tip">很高兴再次见到您！</string>
+    <string name="count_info">账户信息</string>
+    <string name="email_address">电子邮箱地址</string>
+    <string name="login_forget_password">忘记密码?</string>
+    <string name="login_change_password">更改密码</string>
+    <string name="login_change_your_password">更改您的密码</string>
+    <string name="login_new_password">新密码</string>
+    <string name="login_password">密码</string>
+    <string name="login_password_rule_tip">密码位数为8-16个字符，且区分大小写，支持字母、数字、符号</string>
+    <string name="login_password_change_success">密码修改成功</string>
+    <string name="toast_password_no_equals">两次输入的密码不一致</string>
+    <string name="toast_verify_success">验证成功</string>
+    <string name="login_nickname_oversize">用户名不能超过20个字符</string>
+    <string name="login_email_empty">请输入电子邮箱地址</string>
+    <string name="login_email_format_error">请输入正确的电子邮箱地址</string>
+    <string name="login_email_no_account">该账号不存在</string>
+    <string name="login_email_verify_input_error">请输入完整的验证码</string>
+    <string name="login_email_verify_tip_send">验证码已发送到您的邮箱</string>
+    <string name="login_invite_code_invalid">输入的邀请码无效</string>
+    <string name="login_set_info_second_title">请完善你的个人信息</string>
+    <string name="blur_bg">虚拟背景</string>
+    <string name="virtual_image">虚拟形象</string>
+    <string name="welcome">欢迎你</string>
+    <string name="join_utown">加入UTOWN</string>
+    <string name="login_api_error_12001">用户不存在</string>
+    <string name="login_api_error_12002">登录密码错误</string>
+    <string name="login_api_error_12010">该电子邮箱已注册，请直接登录</string>
+    <string name="login_api_error_12011">该电子邮箱未注册</string>
+    <string name="login_api_error_12012">验证码错误</string>
+    <string name="login_api_error_12013">验证码请求频繁，请稍后</string>
+    <string name="login_email_tip_countdown_retry"> 重新获取验证码</string>
+    <string name="login_email_tip_countdown_no">未收到邮箱验证码? </string>
+    <string name="login_email_tip_countdown">未收到邮箱验证码？重新获取验证码(%s)</string>
+    <string name="network_error">网络错误，请稍后重试</string>
+    <string name="unknown_error">未知错误</string>
+    <string name="username">用户名</string>
+    <string name="edit_username">编辑用户名</string>
+    <string name="email">电子邮箱</string>
+    <string name="my_count">我的账户</string>
+    <string name="count">账户</string>
+    <string name="personal_info">个人资料</string>
+    <string name="save">保存</string>
+    <string name="save_success">保存成功</string>
+    <string name="login_out">登出</string>
+    <string name="introduction_me">自我介绍</string>
+    <string name="introduction_me_no">这个人很懒，什么都没有留下</string>
+    <string name="add_introduction_me">添加自我介绍</string>
+    <string name="introduction_me_empty_tip">内容不可为空</string>
+    <string name="introduction_me_oversize_tip">内容不可超过最大字符</string>
+
+    //
+    <string name="home_space_online">人活跃</string>
+    <string name="space_id">空间CODE</string>
+    <string name="space_user_count">成员</string>
+    <string name="space_update_success">更新成功</string>
+    <string name="camera_close_tips">当前摄像头关闭</string>
+    <string name="reset">还原</string>
+    <string name="developing">此功能在紧锣密鼓开发中</string>
+    <string name="zone_code_no_space">空间不存在</string>
 </resources>

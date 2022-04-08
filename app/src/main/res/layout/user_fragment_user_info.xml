@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch"
+    android:background="@color/color_f5f5f5"
+    android:clickable="true"
+    android:focusable="true"
+    tools:ignore="SmallSp">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mUserInfoNestedScrollView"
+        style="@style/MatchWrap"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            style="@style/MatchWrap.Vertical"
+            android:paddingBottom="50dp"
+            android:paddingTop="30dp">
+
+            <!--顶部内容部分-->
+            <LinearLayout
+                style="@style/MatchWrap.Vertical"
+                android:paddingBottom="18dp">
+                <!--顶部用户数据-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mGoUserInfoSettingLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp">
+
+                    <!--用户信息-->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/mUserInfoHeadPic"
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@drawable/food_cookie" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mUserInfoName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/common_new_main_subject_text_333333"
+                        android:textSize="23sp"
+                        app:layout_constraintBottom_toTopOf="@id/mUserInfoClapCode"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@id/mUserInfoHeadPic"
+                        app:layout_constraintTop_toTopOf="@id/mUserInfoHeadPic"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        android:text="李祥" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/mUserInfoClapCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/common_new_main_prompt_text_c1c2c6"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@id/mUserInfoHeadPic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@id/mUserInfoName"
+                        app:layout_constraintTop_toBottomOf="@id/mUserInfoName"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:text="ID" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/user_info_next"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/food_cake"
+                        
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/is_certified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/food_doughnut"
+                        
+                        app:layout_constraintBottom_toBottomOf="@+id/mUserInfoName"
+                        app:layout_constraintStart_toEndOf="@+id/mUserInfoName"
+                        app:layout_constraintTop_toTopOf="@+id/mUserInfoName" />
+
+                    <TextView
+                        android:id="@+id/not_certified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:gravity="center"
+                        android:paddingStart="26dp"
+                        android:paddingEnd="18dp"
+                        android:text="Not Certified"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        
+                        app:layout_constraintBottom_toBottomOf="@+id/mUserInfoName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/mUserInfoName" />
+
+                    <ImageView
+                        android:id="@+id/auth_arrow"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/food_macaron"
+                        app:layout_constraintBottom_toBottomOf="@+id/not_certified"
+                        app:layout_constraintEnd_toEndOf="@+id/not_certified"
+                        app:layout_constraintTop_toTopOf="@+id/not_certified" />
+
+                    <ImageView
+                        android:id="@+id/not_certified_im"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/food_eggyolkcake"
+                        
+                        app:layout_constraintBottom_toBottomOf="@+id/not_certified"
+                        app:layout_constraintEnd_toStartOf="@+id/not_certified"
+                        app:layout_constraintStart_toStartOf="@id/not_certified"
+                        app:layout_constraintTop_toTopOf="@+id/not_certified" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--关注状态-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp">
+
+                    <!--点赞我的-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/mUserInfoClapsContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/mUserInfoFollowingLayout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/mUserInfoClapsTips"
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:src="@drawable/food_popcorn"
+                            app:layout_constraintStart_toEndOf="@id/mUserInfoClapsNum"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mUserInfoClapsNum"
+                            android:includeFontPadding="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/common_new_main_subject_text_333333"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/mUserInfoClapsTips"
+                            tools:ignore="HardcodedText"
+                            tools:text="1213" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingStart="18dp"
+                            android:text="dididi"
+                            android:textColor="@color/common_new_main_prompt_text_c1c2c6"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/mUserInfoClapsNum"
+                            tools:ignore="RtlSymmetry" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--关注我的-->
+                    <LinearLayout
+                        android:id="@+id/mUserInfoFollowingLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/mUserInfoClapsContainer"
+                        app:layout_constraintEnd_toStartOf="@id/mUserInfoFollowersLayout"
+                        app:layout_constraintStart_toEndOf="@id/mUserInfoClapsContainer"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mUserInfoFollowingNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/common_new_main_subject_text_333333"
+                            android:textSize="13sp"
+                            tools:text="1213" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="关注"
+                            android:textColor="@color/common_new_main_prompt_text_c1c2c6"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!--我关注的-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/mUserInfoFollowersLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@id/mUserInfoClapsContainer"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/mUserInfoFollowingLayout"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/mUserInfoAudienceUpNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toEndOf="@id/mUserInfoFollowersNum"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/mUserInfoFollowersNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/common_new_main_subject_text_333333"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/mUserInfoAudienceUpNum"
+                            tools:text="1324" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="关注"
+                            android:textColor="@color/common_new_main_prompt_text_c1c2c6"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/mUserInfoFollowersNum" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--上传下载以及点赞-->
+                <LinearLayout
+                    style="@style/MatchWrap.Horizontal"
+                    android:layout_height="72dp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp">
+
+                    <LinearLayout
+                        android:id="@+id/mUserCenterMyClips"
+                        style="@style/AutoMatch.Vertical"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/rgbef7300_r8"
+                        android:paddingTop="13dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="换头像"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="15dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="star"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mUserCenterMyClaps"
+                        style="@style/AutoMatch.Vertical"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/rgbef7300_r8"
+                        android:paddingTop="13dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="背景"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="15dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text="strin"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mMyGroupBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/rgbef7300_r8"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:src="@drawable/food_popcorn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="MY NOTE"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--通知消息-->
+            <LinearLayout
+                android:id="@+id/mUserCenterNotification"
+                style="@style/MatchWrap.Horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingTop="23dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="23dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/food_popcorn" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="消息通知"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <View style="@style/AutoWrap" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mUserCenterNotificationNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="center"
+                    android:minWidth="16dp"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:text="99+"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/icon_setting_arrow" />
+
+            </LinearLayout>
+
+            <View style="@style/user_center_common_line" />
+
+            <!--我的收藏-->
+            <com.example.lxview.base.widget.LineControlView
+                android:id="@+id/mUserCenterMyFavorites"
+                style="@style/User_MeItemStyle"
+                app:LineViewTitle="我的最爱"
+                app:iconRes="@drawable/food_popcorn" />
+
+            <View style="@style/user_center_common_line" />
+
+            <!--我的好友-->
+            <com.example.lxview.base.widget.LineControlView
+                android:id="@+id/mUserCenterChat"
+                style="@style/User_MeItemStyle"
+                app:LineViewTitle="我的好友"
+                app:iconRes="@drawable/food_eggyolkcake" />
+
+            <View style="@style/user_center_common_line" />
+
+            <!--设置-->
+            <com.example.lxview.base.widget.LineControlView
+                android:id="@+id/mUserCenterSetting"
+                style="@style/User_MeItemStyle"
+                app:LineViewTitle="设置"
+                app:iconRes="@drawable/food_popcorn" />
+
+            <View style="@style/user_center_common_line" />
+
+            <!--帮助-->
+            <com.example.lxview.base.widget.LineControlView
+                android:id="@+id/mUserCenterFeedBackAndHelp"
+                style="@style/User_MeItemStyle"
+                app:LineViewTitle="关于"
+                app:iconRes="@drawable/food_popcorn" />
+
+            <View style="@style/user_center_common_line" />
+
+            <!--底部预留-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/mUserUpLoadClickLayout"
+        layout="@layout/common_upload_view_layout" />
+</RelativeLayout>

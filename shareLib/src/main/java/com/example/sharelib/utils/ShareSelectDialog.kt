@@ -11,7 +11,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.baselib.utils.setVisible
 import com.example.sharelib.R
-import com.sanhe.baselibrary.utils.TextStyleUtils
+import com.example.baselib.utils.TextStyleUtils
 
 /**
  * author: lx

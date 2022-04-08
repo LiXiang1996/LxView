@@ -3,7 +3,7 @@ package com.example.baselib.utils;
 /**
  * author: 李 祥
  * date:   2022/1/13 11:41 上午
- * description:
+ * description:高斯模糊
  */
 
 import android.graphics.Bitmap;

@@ -87,6 +87,66 @@
 
         </style>
 
+    <!--我的页面item-->
+    <style name="User_MeItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+
+    <declare-styleable name="MeLineView">
+        <!-- 名称 -->
+        <attr name="LineViewTitle" format="string" />
+        <!-- 内容或当前状态 -->
+        <attr name="LineViewContent" format="string" />
+        <!-- 是否可以跳转 -->
+        <attr name="canNavition" format="boolean" />
+        <!-- 是否是开关 -->
+        <attr name="openSwitch" format="boolean" />
+        <!-- 深色水波颜色 -->
+        <attr name="textContentColor" format="color|reference" />
+        <!--判断是否有内容-->
+        <attr name="isNull" format="boolean" />
+        <!-- 最大行数 -->
+        <attr name="maxLength" format="integer" />
+        <!-- 图标 -->
+        <attr name="iconRes" format="reference" />
+        <attr name="hasContentIcon" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="login_VerifyEditText">
+        <!--输入框数量-->
+        <attr name="login_inputCount" format="integer" />
+        <!--输入框间距-->
+        <attr name="login_inputSpace" format="dimension" />
+        <!--下划线厚度-->
+        <attr name="login_underlineHeight" format="dimension" />
+        <!--输入框文本大小-->
+        <attr name="login_mTextSize" format="integer" />
+        <!--下划线选中的颜色-->
+        <attr name="login_focusColor" format="color" />
+        <!--下划线未选中的颜色-->
+        <attr name="login_defaultColor" format="color" />
+        <!--下划线距文本的距离-->
+        <attr name="login_underlineSpace" format="dimension" />
+        <!--光标-->
+        <attr name="login_cursorDrawable" format="reference" />
+        <!--输入框内容-->
+        <attr name="login_inputType" format="string" />
+        <!--输入框内容-->
+        <attr name="login_textColor" format="color" />
+
+
+
+
+
+    </declare-styleable>
+
+
+
+    <style name="dialog_change_success">
+        <item name="android:windowBackground">#38000000</item>
+    </style>
 
 
 </resources>

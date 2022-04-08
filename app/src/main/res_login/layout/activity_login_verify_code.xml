@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_color"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:paddingHorizontal="26dp"
+        android:paddingTop="26dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/login_verify_back_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:textColor="@color/login_title_color_c8c8c8"
+            android:src="@mipmap/ic_all_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/login_verify_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="@string/login_email_code_title"
+            android:textColor="@color/login_title_color_c8c8c8"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_verify_back_img"
+            />
+        <TextView
+            android:id="@+id/login_email_verify_tip_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/tips_email_verify"
+            android:textColor="@color/login_tips_8f9092"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_verify_title_tv"
+            />
+
+        <com.example.lxview.base.widget.VerifyEditText
+            android:id="@+id/login_email_et_invite_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            app:login_defaultColor="#E7E7ED"
+            app:login_focusColor="#FEA30F"
+            app:login_inputCount="6"
+            app:login_inputType="number"
+            app:login_mTextSize="24"
+            app:login_underlineHeight="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_email_verify_tip_tv"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_email_verify_next_tv"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:textSize="14sp"
+            android:text="@string/login_setting_userinfo_next"
+            android:background="@drawable/rgb999999_r8"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_email_et_invite_code"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_email_verify_tip_no_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/login_title_color_c8c8c8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_email_verify_next_tv"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

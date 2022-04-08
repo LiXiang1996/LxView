@@ -1,4 +1,4 @@
-package com.example.loading;//
+package com.example.loading;
 
 
 import android.animation.Animator;

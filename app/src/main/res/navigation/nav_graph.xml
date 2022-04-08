@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.lxview.jetpack.navigation.FirstFragment"
+        android:name="com.example.lxview.function.jetpack.navigation.FirstFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.lxview.jetpack.navigation.LoginFragment"
+        android:name="com.example.lxview.function.jetpack.navigation.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
 

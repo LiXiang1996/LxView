@@ -11,6 +11,7 @@
         android:id="@+id/accountToastTx"
         style="@style/WrapWrap"
         android:gravity="center"
-        android:textColor="@color/color_ffffff"
+        android:text="这是一个吐司"
+        android:textColor="@color/im_msg_bg_green"
         android:textSize="16sp" />
 </RelativeLayout>

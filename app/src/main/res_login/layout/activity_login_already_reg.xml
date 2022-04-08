@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_color"
+        android:clipChildren="false"
+        android:paddingHorizontal="26dp"
+        android:paddingTop="46dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/login_email_back_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/ic_all_back"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_welcome_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="@string/welcome_back"
+            android:textColor="@color/login_title_color_c8c8c8"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_email_back_img" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_welcome_tip_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:text="@string/welcome_back_tip"
+            android:textColor="#636466"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_welcome_tv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_count_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:text="@string/count_info"
+            android:textColor="#6C6D6F"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_welcome_tv" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/login_input_email_edit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rgb32363b_r8"
+            android:gravity="center_vertical"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#6C6D6F"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_count_info" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/login_input_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/rgb32363b_r8"
+            android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890"
+            android:gravity="center_vertical"
+            android:hint="@string/login_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="#6C6D6F"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_input_email_edit" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/login_forget_password"
+            android:textColor="@color/login_click_tv_color_ef7300"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_input_password_edit" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_password_next_tv"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_ef7300_99999_status_corners_8"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_forget_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

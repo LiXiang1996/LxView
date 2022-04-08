@@ -1,4 +1,4 @@
-package com.sanhe.baselibrary.utils
+package com.example.baselib.utils
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -10,7 +10,7 @@ import android.text.style.StyleSpan
 /**
  * author: lx
  * Date: 2018/11/19 17:11
- * Description: 处理字符串工具类，用来处理字符串特定位置的颜色，字体变化
+ * Description: 处理字符串工具类，用来处理字符串特定位置的颜色，字体变化永恒的spannableString
  */
 object TextStyleUtils {
 

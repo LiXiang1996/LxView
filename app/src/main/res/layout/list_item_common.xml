@@ -42,6 +42,7 @@
         android:padding="7dp"
         android:text="文本"
         android:textSize="14sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -72,4 +73,11 @@
         app:layout_constraintEnd_toStartOf="@id/im_item_admin_set_tv"
         app:layout_constraintStart_toEndOf="@id/im_item_admin_avatar" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

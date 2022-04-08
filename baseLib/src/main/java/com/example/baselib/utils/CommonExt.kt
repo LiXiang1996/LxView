@@ -30,55 +30,6 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
-///**
-// *  扩展Observable执行
-// */
-//fun <T> Observable<T>.execute(subscriber: BaseSubscriber<T>, lifecycleProvider: LifecycleProvider<*>) {
-//    this.observeOn(AndroidSchedulers.mainThread()).compose(lifecycleProvider.bindToLifecycle()).subscribeOn(Schedulers.io()).subscribe(subscriber)
-//}
-//
-///**
-// *  扩展Observable执行
-// */
-//fun <T> Observable<T>.execute(subscriber: Subscriber<T>) {
-//    this.observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io()).subscribe(subscriber)
-//}
-//
-///**
-// * 扩展数据转换
-// */
-//fun <T> Observable<BaseResp<T>>.convert(): Observable<T> {
-//    return this.flatMap(BaseFunc())
-//}
-//
-///**
-// * 扩展数据转换
-// */
-//fun <T> Observable<BaseGameResp<T>>.convertGameNew(): Observable<T> {
-//    return this.flatMap(BaseGameFunc())
-//}
-//
-///**
-// * 扩展数据转换，游戏上传模块处理
-// */
-//fun <T> Observable<BaseUgcDownUrlResp<T>>.convertUgcDownApi(): Observable<T> {
-//    return this.flatMap(BaseUgcDownFunc())
-//}
-//
-///**
-// *  扩展Boolean类型数据转换
-// */
-//fun <T> Observable<BaseResp<T>>.convertBoolean(): Observable<Boolean?> {
-//    return this.flatMap(BaseFuncBoolean())
-//}
-//
-///**
-// *  扩展String类型数据转换
-// */
-//fun <T> Observable<BaseResp<T>>.convertString(): Observable<String?> {
-//    return this.flatMap(BaseFuncString())
-//}
-//
 
 /**
  * 扩展点击事件
@@ -94,36 +45,6 @@ fun View.onClick(method: () -> Unit) {
     this.setOnClickListener { method() }
 }
 
-///**
-// * 扩展view的可用性
-// */
-//fun View.enable(et: EditText, method: () -> Boolean) {
-//    val btn = this
-//    et.addTextChangedListener(object : DefaultTextWatcher() {
-//        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//            btn.isEnabled = method()
-//        }
-//    })
-//}
-//
-///**
-// * 这里修改登录注册页面相关的按钮点击问题
-// */
-//fun View.loginEnable(et: EditText, method: () -> Boolean) {
-//    val btn = this
-//    et.addTextChangedListener(object : DefaultTextWatcher() {
-//        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//            when (method()) {
-//                true -> {
-//                    btn.setBackgroundResource(R.drawable.common_color_fea30f_radius_8_item_shape)
-//                }
-//                false -> {
-//                    btn.setBackgroundResource(R.drawable.common_color_dddddd_radius_8_click_shape)
-//                }
-//            }
-//        }
-//    })
-//}
 
 /**
  * 加载网络图片

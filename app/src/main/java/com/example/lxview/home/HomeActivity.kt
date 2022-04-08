@@ -3,17 +3,16 @@ package com.example.lxview.home
 import android.content.Intent
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.baselib.utils.startAct
-import com.example.lxview.myFreeView.activity.ExOneActivity
 import com.example.lxview.R
-import com.example.lxview.myFreeView.activity.SampleActivity
+import com.example.lxview.function.myFreeView.activity.SampleActivity
 import com.example.lxview.base.BaseActivity
 import com.example.lxview.base.activity.SampleDialogAndPopActivity
-import com.example.lxview.function.home.activity.HomeFunctionActivity
-import com.example.lxview.ipc.binder.AidlBinderActivity
-import com.example.lxview.ipc.messager.client.MessengerActivity
-import com.example.lxview.jetpack.MyJetPackActivity
-import com.example.lxview.listTimestamp.activity.ListTimeActivity
-import com.example.lxview.timePicker.activity.TimePickerActivity
+import com.example.lxview.function.home.activity.ShareFunctionActivity
+import com.example.lxview.function.ipc.binder.AidlBinderActivity
+import com.example.lxview.function.ipc.messager.client.MessengerActivity
+import com.example.lxview.function.jetpack.MyJetPackActivity
+import com.example.lxview.function.listTimestamp.activity.ListTimeActivity
+import com.example.lxview.function.timePicker.activity.TimePickerActivity
 
 /**
  * author: 李 祥
@@ -50,7 +49,8 @@ class HomeActivity : BaseActivity() {
 
     override fun initListener() {
         tv1?.setOnClickListener {
-            this.startActivity(Intent(this, ExOneActivity::class.java))
+//            ToastU.showToast(this,"滴滴滴滴滴滴") //这个吐司是防止傻逼用户一直点点点而引起的重复弹窗
+            this.startActivity(Intent(this, ListTimeActivity::class.java))
         }
         tv2?.setOnClickListener {
             this.startActivity(Intent(this, SampleActivity::class.java))
@@ -66,7 +66,8 @@ class HomeActivity : BaseActivity() {
         }
 
         tv6?.setOnClickListener {
-            this.startActivity(Intent(this, HomeFunctionActivity::class.java))
+            //分享
+            this.startActivity(Intent(this, ShareFunctionActivity::class.java))
         }
         tv7?.setOnClickListener {
             this.startActivity(Intent(this, SampleDialogAndPopActivity::class.java))

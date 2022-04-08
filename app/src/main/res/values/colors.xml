@@ -10,6 +10,7 @@
     <color name="im_msg_bg_green">#FF3EC093</color>
 
 
+
     <color name="color_3d3d3d">#3d3d3d</color>
     <color name="white">#ffffff</color>
     <color name="color_A6ACBF">#A6ACBF</color>
@@ -106,5 +107,25 @@
 
     <color name="color_0493FE">#0493FE</color>
     <color name="color_FFFCA10D">#FFFCA10D</color>
+
+    <color name="white_4dffffff">#4dFFFFFF</color>
+    <color name="primaryColor">#040408</color>
+    <color name="activity_color">#1A1C1F</color>
+    <color name="login_title_color_c8c8c8">#C8C8C8</color>
+    <color name="login_click_tv_color_ef7300">#EF7300</color>
+    <color name="login_click_tv_color_202225">#202225</color>
+    <color name="login_edit_color_32363b">#32363B</color>
+    <color name="login_tips_e03a42">#E03A42</color>
+    <color name="login_click_999999">#999999</color>
+    <color name="login_tips_8f9092">#FF8F9092</color>
+    <color name="login_tv_color_4df6f6f6">#4df6f6f6</color>
+    <color name="login_tv_color_f6f6f6">#f6f6f6</color>
+    <color name="text_color_e5e5e5">#e5e5e5</color>
+    <color name="text_color_636466">#636466</color>
+    <color name="color_2e3036">#2e3036</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_white">#F0FFFFFF</color>
+    <color name="transparent_db">#E0DBDBDB</color>
 
 </resources>

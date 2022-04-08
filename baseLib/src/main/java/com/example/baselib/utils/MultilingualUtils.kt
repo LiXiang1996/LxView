@@ -238,8 +238,9 @@ object MultilingualUtils {
     fun onConfigurationChanged(context: Context): Configuration? {
         return try {
             val configuration = context.resources.configuration
-            val locale = Locale(RequestHeaderInfoUtils.getAppSystemLocale())
-            configuration.setLocale(locale);configuration
+//            val locale = Locale(RequestHeaderInfoUtils.getAppSystemLocale())
+//            configuration.setLocale(locale);
+                    configuration
         } catch (e: Exception) {
             Log.e("------", "onConfiguration change failed in onConfigurationChanged!!!")
             null
@@ -249,8 +250,8 @@ object MultilingualUtils {
     fun attachBaseContext(ctx: Context): Context {
         return try {
             val configuration = ctx.resources.configuration
-            val locale = Locale(RequestHeaderInfoUtils.getAppSystemLocale())
-            configuration.setLocale(locale)
+//            val locale = Locale(RequestHeaderInfoUtils.getAppSystemLocale())
+//            configuration.setLocale(locale)
             ctx.createConfigurationContext(configuration)
         } catch (e: Exception) {
             Log.e("------", "onConfiguration change failed in attachBaseContext !!!")

@@ -6,9 +6,6 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.os.StrictMode
-import android.provider.MediaStore
-import androidx.core.content.FileProvider
 import com.example.baselib.utils.ClipboardHelper
 import com.example.baselib.utils.ToastUtils
 import com.example.sharelib.`interface`.*
@@ -16,7 +13,6 @@ import com.example.sharelib.`interface`.IShare.Companion.ERROR
 import com.example.sharelib.ui.ShareActivity
 import com.example.sharelib.ui.ShareActivityManager
 import com.example.sharelib.ui.ShareDialogActivity
-import java.io.File
 
 
 class ShareManager private constructor(var context: Context) : IShare {
