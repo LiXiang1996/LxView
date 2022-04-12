@@ -6,7 +6,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.baselib.utils.startAct
 import com.example.lxview.base.BaseActivity
-import com.example.lxview.home.HomeActivity
 import com.example.lxview.home.MainActivity
 
 /**

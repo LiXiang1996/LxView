@@ -1,4 +1,4 @@
-package com.example.lxview.home
+package com.example.lxview.home.tools
 
 import android.content.Intent
 import androidx.appcompat.widget.AppCompatTextView
@@ -19,7 +19,7 @@ import com.example.lxview.function.timePicker.activity.TimePickerActivity
  * date:   2021/12/10 10:38 上午
  * description:
  */
-class HomeActivity : BaseActivity() {
+class NormalToolsActivity : BaseActivity() {
 
     var tv1: AppCompatTextView? = null
     var tv2: AppCompatTextView? = null

@@ -27,11 +27,11 @@
 
         <ImageView
             android:id="@+id/bottom_bar_home_icon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="3dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="4dp"
             android:contentDescription="@null"
-            android:src="@mipmap/share_ic_share_facebook" />
+            android:src="@drawable/gongwenbao" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,11 +58,11 @@
 
         <ImageView
             android:id="@+id/bottom_bar_tools_icon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="3dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="4dp"
             android:contentDescription="@null"
-            android:src="@mipmap/share_ic_share_messages" />
+            android:src="@drawable/zixun" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -88,11 +88,11 @@
 
         <ImageView
             android:id="@+id/bottom_bar_play_icon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="3dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="4dp"
             android:contentDescription="@null"
-            android:src="@mipmap/share_ic_share_instagram" />
+            android:src="@drawable/youxi" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -117,11 +117,11 @@
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="3dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="4dp"
             android:contentDescription="@null"
-            android:src="@mipmap/share_ic_share_messages" />
+            android:src="@drawable/yundong" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -147,11 +147,11 @@
 
         <ImageView
             android:id="@+id/bottom_bar_mine_icon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="3dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="4dp"
             android:contentDescription="@null"
-            android:src="@mipmap/share_ic_share_messages" />
+            android:src="@drawable/yonghu" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -5,16 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.lifecycleScope
+import com.example.lxview.base.log.CTLog
 import kotlinx.coroutines.*
 //import io.utown.core.log.CTLog
 import kotlin.coroutines.CoroutineContext
 
 abstract class Base2Activity : AppCompatActivity(), CoroutineScope {
 
-//    var log: CTLog = CTLog(this.javaClass.name)
+    var log: CTLog = CTLog(this.javaClass.name)
 
     private val errHandler = CoroutineExceptionHandler{ corContext, ex ->
-//        CTLog.e("defaultErrHandler", ex.toString(), ex)
+        CTLog.e("defaultErrHandler", ex.toString(), ex)
     }
     override val coroutineContext: CoroutineContext
         get() = lifecycleScope.coroutineContext + errHandler

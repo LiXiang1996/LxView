@@ -9,7 +9,7 @@ import com.example.lxview.base.BaseFragment
 import com.example.lxview.base.adapter.RequestListDelegate
 import com.example.lxview.base.adapter.RequestListHelper
 import com.example.lxview.function.home.bean.ItemBean
-import com.example.lxview.home.HomeActivity
+import com.example.lxview.home.tools.NormalToolsActivity
 import com.example.lxview.login.activity.LoginActivity
 
 /**
@@ -79,7 +79,7 @@ class ToolsFragment : BaseFragment(), RequestListDelegate<ItemBean> {
                 if (data.tag2?.contains("LoginActivity") == true) {
                     startAct<LoginActivity>()
                 } else if (data.tag2?.contains("HomeActivity") == true) {
-                    startAct<HomeActivity>()
+                    startAct<NormalToolsActivity>()
                 } else startAct(data.tag2 ?: "")
             }
         }

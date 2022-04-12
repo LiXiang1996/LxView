@@ -47,7 +47,8 @@ open class RequestListHelper<T>(delegate: RequestListDelegate<T>) : RequestListD
     open fun initView(recyclerView: RecyclerView, loadingView: BaseLoadingView? = null, loadData: Boolean = true, hasLoadMore: Boolean = true) {
         this.recyclerView = recyclerView //        this.refreshLayout = refreshLayout
         this.loadingView = loadingView
-        val refresh: OnTapListener? = null //        refreshLayout?.setOnRefreshListener { request(true) }
+        val refresh: OnTapListener? = null
+        //        refreshLayout?.setOnRefreshListener { request(true) }
         //        refreshLayout?.setOnLoadMoreListener { request(false) }
         loadingView?.setOnTapListener(refresh) {
             tapLoadMore()

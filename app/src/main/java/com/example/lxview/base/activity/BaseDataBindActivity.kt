@@ -2,6 +2,7 @@ package com.example.lxview.base.activity
 
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.databinding.ViewDataBinding
 import com.example.lxview.R
 import com.example.lxview.base.dialog.ViewLoading
@@ -12,9 +13,11 @@ import kotlinx.coroutines.launch
 open class BaseDataBindActivity<DB : ViewDataBinding> : BaseBindActivity<DB>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        ImmersionBar.with(this).fullScreen(true)
-//            .navigationBarColor(R.color.transparent)
-//            .statusBarColor(R.color.transparent).init()
+        //沉浸式状态栏
+        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+
+
     }
 
     protected fun request(done: suspend () -> Unit, isShowLoading: Boolean = true) {

@@ -29,6 +29,7 @@ class LoginActivity : BaseDataBindActivity<ActivityLoginBinding>() {
             UTownConstant.expireTime = 0
             this.startActivity(Intent(this, LoginRegisterActivity::class.java))
         }.throttle())
+
         meetingTv.setOnClickListener(View.OnClickListener {
         }.throttle())
 

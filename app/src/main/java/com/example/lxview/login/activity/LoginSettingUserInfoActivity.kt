@@ -1,5 +1,6 @@
 package com.example.lxview.login.activity
 
+import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
@@ -11,9 +12,9 @@ import com.example.lxview.base.activity.BaseDataBindActivity
 
 import com.example.lxview.base.ext.throttle
 import com.example.lxview.databinding.ActivitySettingUserinfoBinding
+import com.example.lxview.home.MainActivity
 import com.example.lxview.login.UTownConstant
 import com.example.lxview.login.data.RegisterUserInfoBean
-
 
 
 /**
@@ -47,18 +48,10 @@ class LoginSettingUserInfoActivity : BaseDataBindActivity<ActivitySettingUserinf
 
         })
         mTvNext.setOnClickListener(View.OnClickListener {
-//            var result: ApiResult<String>
-//            if (mNickname.text.length <= 20) {
-//                request({
-//                    result = UTownRepo.userApi.registerUserInfo(RegisterUserInfoBean(nickname = mNickname.text.toString(), sex = selectSex))
-//                    if (result is ApiResult.Success) {
-//                        finish()
-//                        openUnityWithScene(SceneModel.SceneEmptyWithAreaName(SceneModel.SceneEmptyAreaFace))
-//                    } else ToastUtils.loginErrorToast(result, this@LoginSettingUserInfoActivity) {}
-//                })
-//            } else {
-//                ToastUtils.showToast(this@LoginSettingUserInfoActivity, getString(R.string.login_nickname_oversize), color = R.color.login_tips_e03a42)
-//            }
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            intent.setClass(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }.throttle())
         mRadioGroupSex.setOnCheckedChangeListener { _, id ->
             selectSex = when (id) {

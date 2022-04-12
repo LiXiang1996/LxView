@@ -1,5 +1,6 @@
 package com.example.lxview.home
 
+import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.FragmentManager
@@ -34,6 +35,7 @@ class MainActivity :BaseActivity(),ResultClick{
 
 
     override fun initView() {
+
         indicatorView = findViewById(R.id.navigation)
         indicatorView?.listener = this
         container = findViewById(R.id.fragment_container)

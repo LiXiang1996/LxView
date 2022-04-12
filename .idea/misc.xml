@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/rgbef7300_r8.xml" value="0.30388151174668027" />
+        <entry key="app/src/main/res/drawable/rgbffffff_r8.xml" value="0.30388151174668027" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14855072463768115" />
+        <entry key="app/src/main/res/layout/fg_home.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fg_tools.xml" value="0.20165961447573147" />
+        <entry key="app/src/main/res/layout/home_function_activity_layout.xml" value="0.2921577919484209" />
+        <entry key="app/src/main/res/layout/item_layout.xml" value="0.14026236125126135" />
+        <entry key="app/src/main/res/layout/item_layout_home_func.xml" value="0.28958333333333336" />
+        <entry key="app/src/main/res/layout/list_item_common.xml" value="0.14026236125126135" />
+        <entry key="app/src/main/res/layout/main_act_bottom_nav_bar.xml" value="0.28194990679577653" />
+        <entry key="app/src/main/res/layout/user_fragment_user_info.xml" value="0.335" />
+        <entry key="app/src/main/res_login/layout/activity_login.xml" value="0.14026236125126135" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
