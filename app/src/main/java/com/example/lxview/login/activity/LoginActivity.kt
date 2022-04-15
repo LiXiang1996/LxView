@@ -7,7 +7,7 @@ import com.example.lxview.R
 import com.example.lxview.base.activity.BaseDataBindActivity
 import com.example.lxview.base.ext.throttle
 import com.example.lxview.databinding.ActivityLoginBinding
-import com.example.lxview.login.UTownConstant
+import com.example.lxview.login.LXConstant
 
 
 /**
@@ -26,7 +26,7 @@ class LoginActivity : BaseDataBindActivity<ActivityLoginBinding>() {
             this.startActivity(Intent(this, LoginWelcomeBackActivity::class.java))
         }.throttle())
         registerTv.setOnClickListener(View.OnClickListener {
-            UTownConstant.expireTime = 0
+            LXConstant.expireTime = 0
             this.startActivity(Intent(this, LoginRegisterActivity::class.java))
         }.throttle())
 

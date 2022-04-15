@@ -3,16 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bounty_home_video_tab_indicator.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/drawable/rgbef7300_r8.xml" value="0.30388151174668027" />
+        <entry key="app/src/main/res/drawable/rgbffffff_r12.xml" value="0.30388151174668027" />
         <entry key="app/src/main/res/drawable/rgbffffff_r8.xml" value="0.30388151174668027" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14855072463768115" />
+        <entry key="app/src/main/res/layout/fg_card_bag_card_coucher.xml" value="0.28958333333333336" />
+        <entry key="app/src/main/res/layout/fg_card_bag_certificates.xml" value="0.28958333333333336" />
+        <entry key="app/src/main/res/layout/fg_card_bag_ticket.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/fg_home.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fg_tools.xml" value="0.20165961447573147" />
+        <entry key="app/src/main/res/layout/home_activity_layout.xml" value="0.14026236125126135" />
         <entry key="app/src/main/res/layout/home_function_activity_layout.xml" value="0.2921577919484209" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.14026236125126135" />
+        <entry key="app/src/main/res/layout/item_layout_certificates.xml" value="0.4858002014720407" />
         <entry key="app/src/main/res/layout/item_layout_home_func.xml" value="0.28958333333333336" />
+        <entry key="app/src/main/res/layout/item_layout_normal.xml" value="0.28958333333333336" />
         <entry key="app/src/main/res/layout/list_item_common.xml" value="0.14026236125126135" />
+        <entry key="app/src/main/res/layout/lxhome_card_bag_activity_layout.xml" value="0.2979414951245937" />
         <entry key="app/src/main/res/layout/main_act_bottom_nav_bar.xml" value="0.28194990679577653" />
+        <entry key="app/src/main/res/layout/toolbar_normal_layout.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/layout/user_fragment_user_info.xml" value="0.335" />
         <entry key="app/src/main/res_login/layout/activity_login.xml" value="0.14026236125126135" />
       </map>

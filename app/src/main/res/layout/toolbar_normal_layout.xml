@@ -2,19 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/homefunc_toolbar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/white"
-        app:contentInsetStart="0dp">
+        android:layout_height="40dp"
+        android:background="@color/white">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/homefunc_toolbar_left"
+            android:id="@+id/toolbar_left"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
@@ -29,7 +26,7 @@
             />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/homefunc_toolbar_title"
+            android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -38,7 +35,7 @@
             android:textSize="18sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/homefunc_toolbar_right"
+            android:id="@+id/toolbar_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -50,7 +47,7 @@
             />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/homefunctoolbar_right_text_next"
+            android:id="@+id/toolbar_right_text_next"
             android:layout_width="54dp"
             android:layout_height="24dp"
             android:layout_gravity="end"
@@ -59,10 +56,11 @@
             android:textColor="@color/color_333333"
             android:textSize="14sp"
             android:text="Next"
+            android:visibility="gone"
             />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/homefunc_toolbar_right_image"
+            android:id="@+id/toolbar_right_image"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="end|center_vertical"
@@ -72,14 +70,6 @@
             android:scaleType="fitCenter"/>
 
     </androidx.appcompat.widget.Toolbar>
-
-
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        style="@style/MatchWrap"
-        android:id="@+id/home_function_rv"
-        />
 
 
 </LinearLayout>

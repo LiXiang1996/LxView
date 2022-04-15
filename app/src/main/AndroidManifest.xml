@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".home.tools.NormalToolsActivity"/>
+        <activity android:name=".lxtools.NormalToolsActivity"/>
 
         <activity android:name=".home.MainActivity"
             android:launchMode="singleTask">
@@ -57,6 +57,9 @@
         <activity android:name=".login.activity.LoginInviteCodeActivity"/>
         <activity android:name=".login.activity.LoginRegisterActivity" />
         <activity android:name=".login.activity.LoginWelcomeBackActivity"/>
+
+<!--        首页-->
+        <activity android:name=".lxhome.activity.CardBagActivity"/>
 
 
         <service android:name=".RemoteService"

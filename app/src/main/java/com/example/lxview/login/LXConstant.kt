@@ -5,7 +5,7 @@ package com.example.lxview.login
  * date:   2022/3/7 5:31 下午
  * description:UTown 常量
  */
-class UTownConstant {
+class LXConstant {
 
     companion object{
         const val IS_REGISTERED ="isRegistered" //true已经注册
@@ -24,5 +24,12 @@ class UTownConstant {
         const val SIGNUP_STATUS_FACE_DATA ="FACE_DATA"
         const val SIGNUP_STATUS_FINISHED ="FINISHED"
         var expireTime :Long = 0
+
+
+        const val TOOLBAR_LEFT = "toolbar_left"
+        const val TOOLBAR_TITLE = "toolbar_title"
+        const val TOOLBAR_RIGHT = "toolbar_right"
+        const val TOOLBAR_NEXT = "toolbar_next"
+        const val TOOLBAR_RIGHT_IMG = "toolbar_right_img"
     }
 }

@@ -19,7 +19,7 @@ import com.example.lxview.databinding.ActivityLoginAlreadyRegBinding
 import com.example.lxview.login.utils.ViewShakeUtils
 import com.example.lxview.base.ext.openActivity
 import com.example.lxview.home.MainActivity
-import com.example.lxview.login.UTownConstant
+import com.example.lxview.login.LXConstant
 
 /**
  * @author: lixiang
@@ -53,14 +53,14 @@ class LoginWelcomeBackActivity : BaseDataBindActivity<ActivityLoginAlreadyRegBin
                 ViewShakeUtils.shakeAnimation(2, emailEdit)
             } else {
 //                request({
-//                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.sendVerifyCode(SendEmailVerifyCodeBean(captchaType = UTownConstant.FORGET_PASSWORD_EMAIL, identifier = email))
+//                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.sendVerifyCode(SendEmailVerifyCodeBean(captchaType = LXConstant.FORGET_PASSWORD_EMAIL, identifier = email))
 //                    if (result is ApiResult.Success) {
 //                        val a = result.data.resendTime
-//                        UTownConstant.expireTime = TimeUtils.timeDifference(a) ?: 0
+//                        LXConstant.expireTime = TimeUtils.timeDifference(a) ?: 0
 //                        val intent = Intent()
-                        intent.putExtra(UTownConstant.IS_REGISTERED, true)
-                        intent.putExtra(UTownConstant.FORGET_PASSWORD_EMAIL, true)
-                        intent.putExtra(UTownConstant.EMAIL, email)
+                        intent.putExtra(LXConstant.IS_REGISTERED, true)
+                        intent.putExtra(LXConstant.FORGET_PASSWORD_EMAIL, true)
+                        intent.putExtra(LXConstant.EMAIL, email)
                         intent.setClass(this@LoginWelcomeBackActivity, LoginEmailVerifyActivity::class.java)
                         this@LoginWelcomeBackActivity.startActivity(intent)
 //                    } else {
@@ -148,20 +148,20 @@ class LoginWelcomeBackActivity : BaseDataBindActivity<ActivityLoginAlreadyRegBin
 
 //    private fun goSignStatusJump(result: ApiResult.Success<User>) {
 //        when (result.data.profile.signupStatus) {
-//            UTownConstant.SIGNUP_STATUS_ACCEPT_INVITE -> {
+//            LXConstant.SIGNUP_STATUS_ACCEPT_INVITE -> {
 //                val intent = Intent()
 //                intent.setClass(this, LoginInviteCodeActivity::class.java)
 //                this.startActivity(intent)
 //            }
-//            UTownConstant.SIGNUP_STATUS_USER_INFO -> {
+//            LXConstant.SIGNUP_STATUS_USER_INFO -> {
 //                val intent = Intent()
 //                intent.setClass(this, LoginSettingUserInfoActivity::class.java)
 //                this.startActivity(intent)
 //            }
-//            UTownConstant.SIGNUP_STATUS_FACE_DATA -> {
+//            LXConstant.SIGNUP_STATUS_FACE_DATA -> {
 //                openUnityWithScene(SceneModel.SceneEmptyWithAreaName(SceneModel.SceneEmptyAreaFace))
 //            }
-//            UTownConstant.SIGNUP_STATUS_FINISHED -> {
+//            LXConstant.SIGNUP_STATUS_FINISHED -> {
 //                openUnityWithScene(SceneModel.SceneWorld)
 //            }
 //        }

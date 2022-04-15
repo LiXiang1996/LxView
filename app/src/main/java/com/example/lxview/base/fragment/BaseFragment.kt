@@ -1,4 +1,4 @@
-package com.example.lxview.base
+package com.example.lxview.base.fragment
 
 /**
  * author: 李 祥

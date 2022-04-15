@@ -155,6 +155,14 @@ object GlideUtils {
             e.printStackTrace()
         }
     }
+    fun loadResUrlImage(context: Context, url: Int, imageView: ImageView, corner: Int) {
+        val transformation = CornerTransform(context, SizeUtils.dp2px(context, corner.toFloat()).toFloat())
+        try {
+            Glide.with(context).load(url).transform(transformation).into(imageView)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
     fun loadRoundCornerUrlImage2(context: Context, url: String, imageView: ImageView, corner: Int,width:Int,height:Int) {
         val transformation = CornerTransform(context, SizeUtils.dp2px(context, corner.toFloat()).toFloat())
         try {

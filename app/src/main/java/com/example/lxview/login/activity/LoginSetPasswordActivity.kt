@@ -13,7 +13,7 @@ import com.example.lxview.base.activity.BaseDataBindActivity
 
 import com.example.lxview.base.ext.throttle
 import com.example.lxview.databinding.ActivityLoginInputPasswordBinding
-import com.example.lxview.login.UTownConstant
+import com.example.lxview.login.LXConstant
 import com.example.lxview.login.utils.ViewShakeUtils
 
 
@@ -54,7 +54,7 @@ class LoginSetPasswordActivity : BaseDataBindActivity<ActivityLoginInputPassword
                 ToastUtils.show10SpToast(this, getString(R.string.toast_password_no_equals), color = R.color.login_tips_e03a42)
                 ViewShakeUtils.shakeAnimation(2, inputPasswordAgainEdit)
             } else if (consistencyResult) {
-                email = intent.getStringExtra(UTownConstant.EMAIL).toString()
+                email = intent.getStringExtra(LXConstant.EMAIL).toString()
 //                var result: ApiResult<User>?
 //                request( {
 //                    result = UserCenter.getInstance(this@LoginSetPasswordActivity).reg(email, inputPasswordAgainEdit.text.toString())

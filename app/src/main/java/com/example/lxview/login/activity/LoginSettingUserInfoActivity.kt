@@ -13,7 +13,7 @@ import com.example.lxview.base.activity.BaseDataBindActivity
 import com.example.lxview.base.ext.throttle
 import com.example.lxview.databinding.ActivitySettingUserinfoBinding
 import com.example.lxview.home.MainActivity
-import com.example.lxview.login.UTownConstant
+import com.example.lxview.login.LXConstant
 import com.example.lxview.login.data.RegisterUserInfoBean
 
 
@@ -26,7 +26,7 @@ class LoginSettingUserInfoActivity : BaseDataBindActivity<ActivitySettingUserinf
     private val mTvNext: TextView by lazy { findViewById(R.id.login_setting_userinfo_tv_next) }
     private val mNickname: EditText by lazy { findViewById(R.id.login_setting_userinfo_nickname_et) }
     private val mRadioGroupSex: RadioGroup by lazy { findViewById(R.id.login_user_gender_rg_men) }
-    private var selectSex = UTownConstant.MALE
+    private var selectSex = LXConstant.MALE
     override val layout: Int = R.layout.activity_setting_userinfo
     var isNicknameEmpty = true
 
@@ -55,10 +55,10 @@ class LoginSettingUserInfoActivity : BaseDataBindActivity<ActivitySettingUserinf
         }.throttle())
         mRadioGroupSex.setOnCheckedChangeListener { _, id ->
             selectSex = when (id) {
-                R.id.login_user_gender_rb_men -> UTownConstant.MALE
-                R.id.login_user_gender_rb_women -> UTownConstant.FEMALE
-                R.id.login_user_gender_rb_other -> UTownConstant.OTHER
-                else -> UTownConstant.MALE
+                R.id.login_user_gender_rb_men -> LXConstant.MALE
+                R.id.login_user_gender_rb_women -> LXConstant.FEMALE
+                R.id.login_user_gender_rb_other -> LXConstant.OTHER
+                else -> LXConstant.MALE
             }
         }
     }

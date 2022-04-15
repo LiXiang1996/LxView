@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/item_certificates_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:id="@+id/item_certificates_top"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_certificates_avater"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            tools:src = "@drawable/food_popcorn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_certificates_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="健康码"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/item_certificates_avater"
+            app:layout_constraintTop_toTopOf="@id/item_certificates_avater"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_certificates_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="510521199606261038"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/item_certificates_avater"
+            app:layout_constraintTop_toBottomOf="@id/item_certificates_title"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_certificates_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Alice"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/item_certificates_title"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/item_certificates_bottom"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/func1"
+            android:layout_weight="1"
+            tools:text="查看电子证件"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:padding="@dimen/dp_10"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/func2"
+            tools:text="查看证件照"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:padding="@dimen/dp_10"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

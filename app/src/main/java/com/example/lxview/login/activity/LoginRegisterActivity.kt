@@ -15,7 +15,7 @@ import com.example.lxview.base.activity.BaseDataBindActivity
 
 import com.example.lxview.base.ext.throttle
 import com.example.lxview.databinding.ActivityLoginRegisterForEmailBinding
-import com.example.lxview.login.UTownConstant
+import com.example.lxview.login.LXConstant
 import com.example.lxview.login.LoginVerifyCountDownUtils
 import com.example.lxview.login.utils.ViewShakeUtils
 import java.util.regex.Pattern
@@ -35,7 +35,7 @@ class LoginRegisterActivity : BaseDataBindActivity<ActivityLoginRegisterForEmail
     private var time: Long = 0
 
     override fun onResume() {
-        if (UTownConstant.expireTime > 0) {
+        if (LXConstant.expireTime > 0) {
             LoginVerifyCountDownUtils.addObserverTime(LoginRegisterActivity::class.java.toString(), this)
         } else {
             nextTv.text = getString(R.string.email_verify_code)
@@ -78,15 +78,15 @@ class LoginRegisterActivity : BaseDataBindActivity<ActivityLoginRegisterForEmail
             isRight = ((emailEdit.text?.length ?: 0) > 0) && pattern.matcher(emailEdit.text ?: "").matches()
             if (isRight) {
                 val email = emailEdit.text.toString().trim()
-                //                request( { //                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.sendVerifyCode(SendEmailVerifyCodeBean(captchaType = UTownConstant.SIGNUP_EMAIL, identifier = email))
+                //                request( { //                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.sendVerifyCode(SendEmailVerifyCodeBean(captchaType = LXConstant.SIGNUP_EMAIL, identifier = email))
                 //                    if (result is ApiResult.Success) {
                 //                        val resendTime = TimeUtils.timeDifference(result.data.resendTime)
-                //                        if (resendTime != null) { UTownConstant.expireTime = resendTime }
+                //                        if (resendTime != null) { LXConstant.expireTime = resendTime }
                 val intent = Intent()
-                UTownConstant.expireTime = 60000
-                intent.putExtra(UTownConstant.IS_REGISTERED, false)
-                intent.putExtra(UTownConstant.SIGNUP_EMAIL, true)
-                intent.putExtra(UTownConstant.EMAIL, email)
+                LXConstant.expireTime = 60000
+                intent.putExtra(LXConstant.IS_REGISTERED, false)
+                intent.putExtra(LXConstant.SIGNUP_EMAIL, true)
+                intent.putExtra(LXConstant.EMAIL, email)
                 intent.setClass(this@LoginRegisterActivity, LoginEmailVerifyActivity::class.java) //
                 this@LoginRegisterActivity.startActivity(intent)
             //                    } else {

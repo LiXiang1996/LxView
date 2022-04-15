@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="28dp"
+        android:background="@color/white"
+        >
+
+        <com.example.lxview.base.widget.ToolsBarView
+            android:id="@+id/card_bag_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_db"
+            />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/card_bag_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            app:tabGravity="center"
+            app:tabIndicator="@drawable/bounty_home_video_tab_indicator"
+            app:tabIndicatorAnimationMode="linear"
+            app:tabIndicatorColor="@color/blue"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorHeight="4dp"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabSelectedTextColor="@color/blue"
+            app:tabTextAppearance="@style/Bounty_wallet_tab_layout_text_style"
+            app:tabTextColor="#65333333" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/card_bag_viewpager"
+            style="@style/MatchMatch"
+            android:background="@color/transparent_db"
+             />
+
+    </LinearLayout>
+</layout>

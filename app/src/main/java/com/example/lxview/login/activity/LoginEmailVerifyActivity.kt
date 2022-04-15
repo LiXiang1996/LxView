@@ -15,7 +15,7 @@ import com.example.lxview.base.ext.throttle
 import com.example.lxview.base.utils.KeyboardUtils
 import com.example.lxview.base.widget.VerifyEditText
 import com.example.lxview.databinding.ActivityLoginVerifyCodeBinding
-import com.example.lxview.login.UTownConstant
+import com.example.lxview.login.LXConstant
 import com.example.lxview.login.LoginVerifyCountDownUtils
 import com.example.lxview.base.ext.openActivity
 
@@ -40,7 +40,7 @@ class LoginEmailVerifyActivity : BaseDataBindActivity<ActivityLoginVerifyCodeBin
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onResume() {
-        if (UTownConstant.expireTime > 0) LoginVerifyCountDownUtils.addObserverTime(LoginEmailVerifyActivity::class.java.toString(), this)
+        if (LXConstant.expireTime > 0) LoginVerifyCountDownUtils.addObserverTime(LoginEmailVerifyActivity::class.java.toString(), this)
         else {
             val changedString = "<font color='#FEA30F'>${getString(R.string.login_email_tip_countdown_retry)}</font>"
             tipText.text = Html.fromHtml(getString(R.string.login_email_tip_countdown_no) + changedString,Html.FROM_HTML_MODE_COMPACT)
@@ -51,20 +51,20 @@ class LoginEmailVerifyActivity : BaseDataBindActivity<ActivityLoginVerifyCodeBin
     }
 
     override fun initView() {
-        email = intent.getStringExtra(UTownConstant.EMAIL).toString()
+        email = intent.getStringExtra(LXConstant.EMAIL).toString()
     }
 
     override fun initListener() {
         closeIcon.setOnClickListener { finish() }
         nextTv.setOnClickListener(View.OnClickListener {
-            isRegistered = intent.getBooleanExtra(UTownConstant.IS_REGISTERED, false)
+            isRegistered = intent.getBooleanExtra(LXConstant.IS_REGISTERED, false)
             captcha = editText.content
             if (!isRegistered && email.isNotEmpty() && captcha.length == 6) {  //未注册
                 request({
-//                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.checkVerifyCode(SendEmailVerifyCodeBean(captchaType = UTownConstant.SIGNUP_EMAIL, identifier = email, captcha))
+//                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.checkVerifyCode(SendEmailVerifyCodeBean(captchaType = LXConstant.SIGNUP_EMAIL, identifier = email, captcha))
 //                    if (result is ApiResult.Success) {
                         val intent = Intent()
-                        intent.putExtra(UTownConstant.EMAIL, email)
+                        intent.putExtra(LXConstant.EMAIL, email)
                         intent.setClass(this@LoginEmailVerifyActivity, LoginSetPasswordActivity::class.java)
                         this@LoginEmailVerifyActivity.startActivity(intent)
 //                    } else {
@@ -76,10 +76,10 @@ class LoginEmailVerifyActivity : BaseDataBindActivity<ActivityLoginVerifyCodeBin
                 })
             } else if (isRegistered && email.isNotEmpty() && captcha.length == 6) { //更改密码
 //                request({
-//                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.checkVerifyCode(SendEmailVerifyCodeBean(captchaType = UTownConstant.FORGET_PASSWORD_EMAIL, identifier = email, captcha))
+//                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.checkVerifyCode(SendEmailVerifyCodeBean(captchaType = LXConstant.FORGET_PASSWORD_EMAIL, identifier = email, captcha))
 //                    if (result is ApiResult.Success) {
                         val intent = Intent()
-                        intent.putExtra(UTownConstant.EMAIL, email)
+                        intent.putExtra(LXConstant.EMAIL, email)
                         intent.setClass(this@LoginEmailVerifyActivity, LoginChangePasswordActivity::class.java)
                         this@LoginEmailVerifyActivity.startActivity(intent)
 //                    } else {
@@ -109,14 +109,14 @@ class LoginEmailVerifyActivity : BaseDataBindActivity<ActivityLoginVerifyCodeBin
 
         tipText.setOnClickListener {
             if (enableRetry) {
-//                isRegistered = intent.getBooleanExtra(UTownConstant.IS_REGISTERED, false)
-//                val types = if (isRegistered) UTownConstant.FORGET_PASSWORD_EMAIL else UTownConstant.SIGNUP_EMAIL
+//                isRegistered = intent.getBooleanExtra(LXConstant.IS_REGISTERED, false)
+//                val types = if (isRegistered) LXConstant.FORGET_PASSWORD_EMAIL else LXConstant.SIGNUP_EMAIL
 //                request({
 //                    val result: ApiResult<SendEmailVerifyCodeResultBean> = UTownRepo.userApi.sendVerifyCode(SendEmailVerifyCodeBean(captchaType = types, identifier = email))
 //                    if (result is ApiResult.Success) {
 //                        val resendTime = TimeUtils.timeDifference(result.data.resendTime)
 //                        if (resendTime != null) {
-//                            UTownConstant.expireTime = resendTime
+//                            LXConstant.expireTime = resendTime
 //                            LoginVerifyCountDownUtils.addObserverTime(LoginEmailVerifyActivity::class.java.toString(), this)
 //                        }
 //                        ToastUtils.showToast(this@LoginEmailVerifyActivity, getString(R.string.login_email_verify_tip_send), color = R.color.teal_200)

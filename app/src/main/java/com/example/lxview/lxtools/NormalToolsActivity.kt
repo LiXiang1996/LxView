@@ -1,4 +1,4 @@
-package com.example.lxview.home.tools
+package com.example.lxview.lxtools
 
 import android.content.Intent
 import androidx.appcompat.widget.AppCompatTextView

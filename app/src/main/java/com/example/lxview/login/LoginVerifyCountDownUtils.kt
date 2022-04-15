@@ -27,7 +27,7 @@ object LoginVerifyCountDownUtils {
 
         private fun calculateExpireTime() {
             this.l.get()?.onCountdown(expireTime - usedTime)
-            UTownConstant.expireTime = expireTime-usedTime
+            LXConstant.expireTime = expireTime-usedTime
         }
 
         internal fun clearListener() {
@@ -59,9 +59,9 @@ object LoginVerifyCountDownUtils {
 
 
     fun addObserverTime(className:String,context: Context){
-        registerCountdownObserver(UTownConstant.expireTime, context as CountdownListener )
+        registerCountdownObserver(LXConstant.expireTime, context as CountdownListener )
 //        TimerManager.addObserver(context as LifecycleOwner, 1000L, className, { time ->
-//            if (time > UTownConstant.expireTime) {
+//            if (time > LXConstant.expireTime) {
 //                TimerManager.removeObserver(context,className)
 //            }else{
 //                countDownTime(time)

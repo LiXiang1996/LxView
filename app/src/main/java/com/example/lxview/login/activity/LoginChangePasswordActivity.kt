@@ -14,7 +14,7 @@ import com.example.lxview.R
 import com.example.lxview.base.activity.BaseDataBindActivity
 import com.example.lxview.base.ext.throttle
 import com.example.lxview.databinding.ActivityLoginChangePasswordBinding
-import com.example.lxview.login.UTownConstant
+import com.example.lxview.login.LXConstant
 import com.example.lxview.login.utils.ViewShakeUtils
 
 
@@ -48,7 +48,7 @@ class LoginChangePasswordActivity : BaseDataBindActivity<ActivityLoginChangePass
                 ViewShakeUtils.shakeAnimation(2, inputPasswordAgainEdit)
             } else if (isRightInputPasswordEdit && isRightInputPasswordAgainEdit) {
                 if (inputPasswordAgainEdit.text.toString() == inputPasswordEdit.text.toString()) {
-                    email = intent.getStringExtra(UTownConstant.EMAIL).toString()
+                    email = intent.getStringExtra(LXConstant.EMAIL).toString()
 //                    var result: ApiResult<Boolean>?
 //                    request({
 //                        result = UTownRepo.userApi.changePassword(RegisterBean("EMAIL", email, inputPasswordAgainEdit.text.toString()))

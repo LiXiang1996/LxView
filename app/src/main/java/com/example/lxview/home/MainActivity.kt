@@ -1,12 +1,9 @@
 package com.example.lxview.home
 
-import android.view.WindowManager
 import android.widget.FrameLayout
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.FragmentManager
 import com.example.lxview.R
 import com.example.lxview.base.BaseActivity
-import com.example.lxview.base.BaseFragment
+import com.example.lxview.base.fragment.BaseFragment
 import com.example.lxview.base.widget.MainBottomNavBar
 import com.example.lxview.home.fragment.*
 import androidx.fragment.app.Fragment

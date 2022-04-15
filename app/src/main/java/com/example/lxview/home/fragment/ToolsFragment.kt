@@ -5,11 +5,11 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.baselib.utils.startAct
 import com.example.lxview.R
-import com.example.lxview.base.BaseFragment
+import com.example.lxview.base.fragment.BaseFragment
 import com.example.lxview.base.adapter.RequestListDelegate
 import com.example.lxview.base.adapter.RequestListHelper
 import com.example.lxview.function.home.bean.ItemBean
-import com.example.lxview.home.tools.NormalToolsActivity
+import com.example.lxview.lxtools.NormalToolsActivity
 import com.example.lxview.login.activity.LoginActivity
 
 /**
