@@ -12,6 +12,7 @@ class ItemBean : MultiItemEntity {
     var tag: Int? = 0
     var tag2: String? = ""
     var account:String?=""
+    var password:String?=""
     var name:String?=""
 
     var clickText1:String?=null

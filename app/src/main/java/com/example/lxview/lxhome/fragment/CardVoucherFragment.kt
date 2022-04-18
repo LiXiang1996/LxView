@@ -16,4 +16,6 @@ class CardVoucherFragment: BaseFragment() {
     private var recyclerView: RecyclerView? = null
 
 
+
+
 }

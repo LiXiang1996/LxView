@@ -37,11 +37,11 @@ class ToolsBarView@JvmOverloads constructor(context: Context?, attrs: AttributeS
     }
 
 
-    fun addListener(str:String,str2:String,result: (String)->Unit){
+    fun addListener(titleStr:String,backStr:String,result: (String)->Unit){
         backIcon?.setOnClickListener { result(LXConstant.TOOLBAR_LEFT) }
         rightText?.setOnClickListener { result(LXConstant.TOOLBAR_RIGHT) }
-        title?.text = str
-        backIcon?.text = str2
+        title?.text = titleStr
+        backIcon?.text = backStr
     }
 
 

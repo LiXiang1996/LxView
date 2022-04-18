@@ -8,6 +8,7 @@ import com.example.lxview.R
 import com.example.lxview.base.fragment.BaseFragment
 import com.example.lxview.base.adapter.RequestListDelegate
 import com.example.lxview.base.adapter.RequestListHelper
+import com.example.lxview.base.route.RoutePath
 import com.example.lxview.function.home.bean.ItemBean
 import com.example.lxview.lxtools.NormalToolsActivity
 import com.example.lxview.login.activity.LoginActivity
@@ -76,11 +77,7 @@ class ToolsFragment : BaseFragment(), RequestListDelegate<ItemBean> {
             tvDescription.text = data.introduction
             btSet.text = "查看"
             btSet.setOnClickListener {
-                if (data.tag2?.contains("LoginActivity") == true) {
-                    startAct<LoginActivity>()
-                } else if (data.tag2?.contains("HomeActivity") == true) {
-                    startAct<NormalToolsActivity>()
-                } else startAct(data.tag2 ?: "")
+                RoutePath.jumpAct(context,data.tag2)
             }
         }
     }

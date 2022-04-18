@@ -34,7 +34,7 @@
             app:tabPaddingStart="0dp"
             app:tabSelectedTextColor="@color/blue"
             app:tabTextAppearance="@style/Bounty_wallet_tab_layout_text_style"
-            app:tabTextColor="#65333333" />
+            app:tabTextColor="@color/black" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/card_bag_viewpager"

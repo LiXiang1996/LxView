@@ -47,6 +47,7 @@
                 android:paddingHorizontal="14dp"
                 android:textSize="12sp"
                 android:textColorHint="@color/color_grey_999999"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/home_title"
                 app:layout_constraintEnd_toStartOf="@id/home_add_icon"
                 app:layout_constraintStart_toEndOf="@id/home_title"
@@ -64,11 +65,11 @@
                 app:layout_constraintTop_toTopOf="@id/home_title" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginHorizontal="16dp"
+                android:layout_marginHorizontal="8dp"
                 android:id="@+id/home_main_function_rv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginVertical="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@id/home_title"
                 app:layout_constraintTop_toBottomOf="@id/home_search" />
@@ -113,10 +114,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
+                    android:id="@+id/big_bg"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/home_what_should_i_do_text"
                     android:src="@drawable/big_bg"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/big_bg"/>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

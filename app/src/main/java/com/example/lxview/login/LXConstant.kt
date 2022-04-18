@@ -24,6 +24,7 @@ class LXConstant {
         const val SIGNUP_STATUS_FACE_DATA ="FACE_DATA"
         const val SIGNUP_STATUS_FINISHED ="FINISHED"
         var expireTime :Long = 0
+        var isPlay :Boolean = false
 
 
         const val TOOLBAR_LEFT = "toolbar_left"
