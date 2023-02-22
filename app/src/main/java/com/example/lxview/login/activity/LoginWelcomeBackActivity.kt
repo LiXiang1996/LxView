@@ -18,7 +18,7 @@ import com.example.lxview.databinding.ActivityLoginAlreadyRegBinding
 
 import com.example.lxview.login.utils.ViewShakeUtils
 import com.example.lxview.base.ext.openActivity
-import com.example.lxview.home.MainActivity
+import com.example.lxview.MainActivity
 import com.example.lxview.login.LXConstant
 
 /**

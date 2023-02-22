@@ -1,19 +1,18 @@
 package com.example.lxview
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.CountDownTimer
 import android.widget.ImageView
 import android.widget.TextView
-import com.example.baselib.utils.startAct
-import com.example.lxview.base.BaseActivity
-import com.example.lxview.home.MainActivity
+import com.example.lxview.base.activity.BaseActivity
 
 /**
  * author: 李 祥
  * date:   2022/3/31 1:43 下午
- * description:
+ * description:启屏页，加载5秒
  */
-class SplashActivity :BaseActivity() {
+class SplashActivity : BaseActivity() {
 
     override val contentId: Int
         get() = R.layout.activity_splash
@@ -21,9 +20,6 @@ class SplashActivity :BaseActivity() {
     private val skipText:TextView by lazy { findViewById(R.id.skip_txt) }
     private val splashImg:ImageView by lazy { findViewById(R.id.splash_img) }
 
-    override fun initData() {
-        super.initData()
-    }
 
     override fun initView() {
         timer.start()
@@ -54,6 +50,10 @@ class SplashActivity :BaseActivity() {
 
 
     fun toMain(){
-        startAct<MainActivity>()
+        val intent =Intent()
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        intent.setClass(this,MainActivity::class.java)
+        this.startActivity(intent)
+        finish()
     }
 }

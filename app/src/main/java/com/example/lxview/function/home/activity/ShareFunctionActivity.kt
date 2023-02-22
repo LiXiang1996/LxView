@@ -5,7 +5,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.loading.BaseLoadingView
 import com.example.lxview.R
-import com.example.lxview.base.BaseActivity
+import com.example.lxview.base.activity.BaseActivity
 import com.example.lxview.base.adapter.RequestListDelegate
 import com.example.lxview.base.adapter.RequestListHelper
 import com.example.lxview.function.home.bean.ItemBean

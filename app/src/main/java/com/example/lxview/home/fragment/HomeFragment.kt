@@ -1,28 +1,31 @@
 package com.example.lxview.home.fragment
 
-import android.content.Intent
-import android.content.pm.PackageManager
+import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.content.res.AssetManager
+import android.media.MediaPlayer
+import android.text.InputFilter
+import android.text.method.DigitsKeyListener
+import android.view.animation.Animation
+import android.view.animation.LinearInterpolator
+import android.widget.EditText
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.baselib.utils.startAct
+import com.bumptech.glide.Glide
 import com.example.lxview.R
-import com.example.lxview.base.BaseApplication
-import com.example.lxview.base.fragment.BaseFragment
 import com.example.lxview.base.adapter.BaseAdapter
 import com.example.lxview.base.adapter.RequestListDelegate
 import com.example.lxview.base.adapter.RequestListHelper
-import com.example.lxview.function.home.bean.ItemBean
-import com.example.lxview.lxtools.NormalToolsActivity
-import com.example.lxview.login.activity.LoginActivity
-import com.example.lxview.lxhome.activity.CardBagActivity
-
-import android.media.MediaPlayer
+import com.example.lxview.base.fragment.BaseFragment
 import com.example.lxview.base.route.RoutePath
+import com.example.lxview.function.home.bean.ItemBean
 import com.example.lxview.login.LXConstant
 import java.io.IOException
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
 
 /**
  * author: 李 祥
@@ -36,25 +39,44 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
     private var recycleViewMain: RecyclerView? = null
     private var recycleViewSecond: RecyclerView? = null
     private val requestListHelper = RequestListHelper(this)
-    private var recycleViewSecondAdapter:BaseAdapter ?=null
+    private var recycleViewSecondAdapter: BaseAdapter? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var layoutManager2: RecyclerView.LayoutManager? = null
+    private var searchEdit: EditText? = null
+
     //实例化播放内核
-    private var mediaPlayer  = MediaPlayer() //获得播放源访问入口
+    private var mediaPlayer = MediaPlayer() //获得播放源访问入口
+
     //获得播放源访问入口
-    private var am: AssetManager ?=null
+    private var am: AssetManager? = null
+
+    //动画
+    var imgAnimation: Animation? = null
+    var lin: LinearInterpolator? = null
+    var animtorAlpha: ObjectAnimator? = null
 
 
+    @SuppressLint("ObjectAnimatorBinding")
     override fun initView() {
+        searchEdit = mRootView.findViewById(R.id.home_search) //对输入的每一个字符进行判断
+        val typeFilter = InputFilter { source, start, end, dest, dstart, dend -> //限制只能输入中文，英文，数字
+            //            val p: Pattern = Pattern.compile("[0-9a-zA-Z|\u4e00-\u9fa5]+")
+            val p: Pattern = Pattern.compile("[0-9a-zA-Z|!@#$]+")
+            val m: Matcher = p.matcher(source.toString())
+            if (!m.matches()) "" else null
+        }
+
+        searchEdit?.filters = arrayOf(typeFilter, InputFilter.LengthFilter(10))
+
         recycleViewMain = mRootView.findViewById<RecyclerView>(R.id.home_main_function_rv)
         recycleViewMain?.let {
             requestListHelper.initView(it, null, loadData = true, hasLoadMore = true)
         }
-        nazimieDrawable = mRootView.findViewById(R.id.big_bg)
+        nazimieDrawable = mRootView.findViewById(R.id.home_music_bg)
 
         recycleViewSecond = mRootView.findViewById<RecyclerView>(R.id.home_second_rv)
         recycleViewSecond?.let {
-            recycleViewSecondAdapter = BaseAdapter(R.layout.item_layout_normal,it)
+            recycleViewSecondAdapter = BaseAdapter(R.layout.item_layout_normal)
             it.adapter = recycleViewSecondAdapter
         }
         layoutManager = GridLayoutManager(context, 4)
@@ -63,7 +85,14 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
         recycleViewMain?.layoutManager = layoutManager
         recycleViewSecond?.layoutManager = layoutManager2
 
+        animtorAlpha = ObjectAnimator.ofFloat(nazimieDrawable, "rotation", 0f, 720f); //旋转不停顿
+        animtorAlpha?.interpolator = object : LinearInterpolator() {} //设置动画重复次数
+        animtorAlpha?.repeatCount = 100 //旋转时长
+        animtorAlpha?.duration = 36000 //开始旋转
+
+
     }
+
 
     override fun initListener() {
         nazimieDrawable?.setOnClickListener {
@@ -72,22 +101,42 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
                     am = requireActivity().assets
                     val afd = am?.openFd("nazimie.mp3")  //给MediaPlayer设置播放源
                     if (afd != null) {
-                        mediaPlayer?.setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
+                        mediaPlayer.setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
                     }
+                    if (animtorAlpha?.isPaused == true) {
+                        animtorAlpha?.resume()
+                    } else animtorAlpha?.start()
+
                 } catch (e: IOException) {
                     e.printStackTrace()
                 } //设置准备就绪状态监听
 
                 mediaPlayer.setOnPreparedListener { // 开始播放
-                    mediaPlayer!!.start()
+                    mediaPlayer.start()
                 } //准备播放
                 mediaPlayer.prepareAsync()
                 LXConstant.isPlay = true
-            }else {
+            } else {
                 mediaPlayer.reset()
+                if (animtorAlpha?.isRunning == true) {
+                    animtorAlpha?.pause()
+                }
+                nazimieDrawable?.clearAnimation()
                 LXConstant.isPlay = false
             }
         }
+
+
+        nazimieDrawable?.post {
+            context?.let {
+                nazimieDrawable?.let { it1 ->
+                    Glide.with(it).asBitmap().skipMemoryCache(true).load(R.drawable.big_bg)
+                        .circleCrop().into(it1)
+                }
+            }
+        }
+
+
     }
 
     override fun initData() {
@@ -97,37 +146,37 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
             this.title = "文件"
             this.avatarRes = R.drawable.yinhangka
             this.introduction = "登录注册等流程"
-            this.tag2 = "ZHIFUBAO"
+            this.route = "ZHIFUBAO"
         })
         secondListData.add(1, ItemBean().apply {
-            this.title = "日历"
+            this.title = "导航栏"
             this.avatarRes = R.drawable.yang_2
-            this.introduction = "登录注册等流程"
-            this.tag2 = "HomeActivity"
+            this.introduction = "导航栏"
+            this.route = RoutePath.MainApp.NAV_ACT
         })
         secondListData.add(2, ItemBean().apply {
-            this.title = "相册"
+            this.title = "浏览器"
             this.avatarRes = R.drawable.yang_3
             this.introduction = "登录注册等流程"
-            this.tag2 = "HomeActivity"
+            this.route = RoutePath.MainApp.WEB_VIEW
         })
         secondListData.add(3, ItemBean().apply {
-            this.title = "通信录"
+            this.title = "数据库"
             this.avatarRes = R.drawable.yang_4
             this.introduction = "登录注册等流程"
-            this.tag2 = "HomeActivity"
+            this.route = RoutePath.MainApp.FUNC_SQL
         })
         secondListData.add(4, ItemBean().apply {
-            this.title = "通信录"
+            this.title = "游戏分组"
             this.avatarRes = R.drawable.yang_5
             this.introduction = "登录注册等流程"
-            this.tag2 = "HomeActivity"
+            this.route = RoutePath.MainApp.GAME_TEAM
         })
         secondListData.add(5, ItemBean().apply {
-            this.title = "more"
+            this.title = "图片处理"
             this.avatarRes = R.drawable.yang_6
             this.introduction = "登录注册等流程"
-            this.tag2 = "HomeActivity"
+            this.route = RoutePath.MainApp.IMG_CENTER
         })
         recycleViewSecondAdapter?.setNewData(secondListData)
         super.initData()
@@ -143,25 +192,25 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
             this.title = "卡包"
             this.avatarRes = R.drawable.yinhangka
             this.introduction = "卡包功能"
-            this.tag2 = RoutePath.MainApp.CARD_BAG
+            this.route = RoutePath.MainApp.CARD_BAG
         })
         list.add(1, ItemBean().apply {
             this.title = "简历"
             this.avatarRes = R.drawable.yang_2
             this.introduction = "登录注册等流程"
-            this.tag2 = RoutePath.MainApp.TOOLS_NORMAL
+            this.route = RoutePath.MainApp.TOOLS_NORMAL
         })
         list.add(2, ItemBean().apply {
             this.title = "账号"
             this.avatarRes = R.drawable.yang_3
             this.introduction = "打开账号界面"
-            this.tag2 = "AccountsTotalActivity"
+            this.route = "AccountsTotalActivity"
         })
         list.add(3, ItemBean().apply {
             this.title = "学习"
             this.avatarRes = R.drawable.yang_4
             this.introduction = "登录注册等流程"
-            this.tag2 = RoutePath.MainApp.TOOLS_NORMAL
+            this.route = RoutePath.MainApp.TOOLS_NORMAL
         })
 
         response(true, list)
@@ -173,15 +222,18 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
             val title: AppCompatTextView = findViewById(R.id.item_home_func_title)
 
             avatar.let {
-                com.bumptech.glide.Glide.with(avatar).load(data.avatarRes).placeholder(R.drawable.ic_launcher_foreground).circleCrop().into(avatar)
+               Glide.with(avatar).load(data.avatarRes).placeholder(R.drawable.ic_launcher_foreground).circleCrop().into(avatar)
             }
             title.text = data.title
 
             this.setOnClickListener {
-                RoutePath.jumpAct(context,data.tag2)
+                RoutePath.jumpAct(context, data.route)
             }
         }
     }
 
-
+    override fun onDestroy() {
+        mediaPlayer.release()
+        super.onDestroy()
+    }
 }

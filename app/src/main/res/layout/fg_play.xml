@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -13,4 +14,77 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fg_play_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fg_play_img"
+        android:src="@drawable/bg_guimie_1"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/edit_container_rl"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="23dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/fg_play_bg"
+        android:background="#FFE8e8e8"
+        >
+
+        <LinearLayout
+            android:id="@+id/edit_container_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="12dp"
+                android:text="+86"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_16pt_arrow_down"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="2dp"
+                android:layout_height="24dp"
+                android:background="#D8D8D8"/>
+
+        </LinearLayout>
+
+
+        <EditText
+            app:layout_constraintStart_toEndOf="@id/edit_container_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/edit_container_phone"
+            android:hint="输入内容"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:text="切换"
+        android:paddingHorizontal="12dp"
+        android:background="@color/zhifubao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/edit_container_rl"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

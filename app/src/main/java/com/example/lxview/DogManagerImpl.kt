@@ -101,7 +101,7 @@ abstract class DogManagerImpl : Binder(), IDogManager {
             }
             val iin = obj.queryLocalInterface(DESCRIPTOR) //如果是同1个进程，也就是说进程内通信的话 我们就返回括号内里的对象
             return if (iin != null && iin is IDogManager) {
-                iin as IDogManager?
+                iin
             } else Proxy(obj) //如果不是同一进程，是2个进程之间相互通信，那我们就得返回这个Stub.Proxy 看上去叫Stub 代理的对象了
         }
 

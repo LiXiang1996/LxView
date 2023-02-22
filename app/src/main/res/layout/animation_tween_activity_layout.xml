@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/food_eggyolkcake"
+                android:id="@+id/animation_tween_alpha"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="透明度"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="3dp"
+                android:id="@+id/animation_tween_run_control_tv"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_black_corners_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="消失"/>
+
+            <ImageView
+                android:src="@drawable/welcome_00000"
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/animation_tween_rotate"
+                android:layout_width="100dp"
+                android:scaleType="fitCenter"
+                android:layout_height="180dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="旋转"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="3dp"
+                android:id="@+id/animation_tween_rotate_control"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_black_corners_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="暂停/继续"/>
+
+            <ImageView
+                android:src="@drawable/big_bg"
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/animation_tween_translate"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_height="180dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="平移"/>
+
+            <ImageView
+                android:src="@drawable/welcome_00000"
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/animation_tween_scale"
+                android:layout_width="100dp"
+                android:scaleType="fitCenter"
+                android:layout_height="180dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="缩放"/>
+
+            <ImageView
+                android:src="@drawable/big_bg"
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/animation_tween_code"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/animation_to_alpha"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="透明度"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/animation_to_ratate"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="旋转"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/animation_to_translate"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="平移"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/animation_to_scale"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="缩放"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

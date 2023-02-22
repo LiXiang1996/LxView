@@ -10,7 +10,7 @@ import android.util.Log
 /**
  * author: 李 祥
  * date:   2022/2/25 4:00 下午
- * description:
+ * description:服务端
  */
 class MessengerService : Service() {
 
@@ -18,6 +18,9 @@ class MessengerService : Service() {
     private val mHandler = MessengerHandler()
     private val mMessenger: Messenger = Messenger(mHandler)
 
+    override fun onCreate() {
+        super.onCreate()
+    }
     override fun onBind(intent: Intent?): IBinder {
         return mMessenger.binder
     }

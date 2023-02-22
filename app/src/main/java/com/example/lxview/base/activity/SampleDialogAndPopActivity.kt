@@ -4,13 +4,10 @@ import android.app.AlertDialog
 import android.app.Dialog
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.Window
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.lxview.R
-import com.example.lxview.base.BaseActivity
 import com.example.lxview.base.dialog.PictureDialog
 import com.example.lxview.base.dialog.ViewLoading
 import com.example.lxview.base.pop.PickHistorySelectPop

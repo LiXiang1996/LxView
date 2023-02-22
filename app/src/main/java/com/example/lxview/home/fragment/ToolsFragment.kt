@@ -19,12 +19,13 @@ import com.example.lxview.login.activity.LoginActivity
  * description:
  */
 class ToolsFragment : BaseFragment(), RequestListDelegate<ItemBean> {
-    override val contentId: Int
-        get() = R.layout.fg_tools
+
     private var recyclerView: RecyclerView? = null
     private val requestListHelper = RequestListHelper(this)
 
 
+    override val contentId: Int
+        get() = R.layout.fg_tools
     override fun initView() {
         recyclerView = activity?.findViewById(R.id.tools_recycle)
         recyclerView?.let {
@@ -51,13 +52,19 @@ class ToolsFragment : BaseFragment(), RequestListDelegate<ItemBean> {
             this.title = "登录"
             this.avatarRes = R.drawable.yang_1
             this.introduction = "登录注册等流程"
-            this.tag2 = "LoginActivity"
+            this.route = "LoginActivity"
         })
         list.add(1, ItemBean().apply {
-            this.title = "工具类"
+            this.title = "动画"
             this.avatarRes = R.drawable.yang_2
-            this.introduction = "登录注册等流程"
-            this.tag2 = "HomeActivity"
+            this.introduction = "各类动画"
+            this.route = RoutePath.MainApp.ANIMATION
+        })
+        list.add(2, ItemBean().apply {
+            this.title = "心跳检测"
+            this.avatarRes = R.drawable.yang_2
+            this.introduction = ""
+            this.route = ""
         })
 
         response(true, list)
@@ -77,7 +84,9 @@ class ToolsFragment : BaseFragment(), RequestListDelegate<ItemBean> {
             tvDescription.text = data.introduction
             btSet.text = "查看"
             btSet.setOnClickListener {
-                RoutePath.jumpAct(context,data.tag2)
+                if (position == 2) {
+
+                } else RoutePath.jumpAct(context, data.route)
             }
         }
     }

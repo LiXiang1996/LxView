@@ -10,7 +10,7 @@ class ItemBean : MultiItemEntity {
     var avatarRes: Int? = 0
     var code: String? = ""
     var tag: Int? = 0
-    var tag2: String? = ""
+    var route: String? = ""
     var account:String?=""
     var password:String?=""
     var name:String?=""

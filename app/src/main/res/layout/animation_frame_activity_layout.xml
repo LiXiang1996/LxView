@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/run_00001"
+                android:id="@+id/animation_frame_run_img"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="奔跑 动画执行无数次"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="3dp"
+                android:id="@+id/animation_frame_run_control_tv"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_black_corners_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="暂停"/>
+
+            <ImageView
+                android:src="@drawable/welcome_00000"
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/animation_frame_start_img"
+                android:layout_width="100dp"
+                android:scaleType="fitCenter"
+                android:layout_height="180dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="加载页 只执行一次"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/animation_frame_loading_control_tv"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="播放"/>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,14 +12,14 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import com.example.lxview.*
-import com.example.lxview.base.BaseActivity
+import com.example.lxview.base.activity.BaseActivity
 
 /**
  * author: 李 祥
  * date:   2022/2/24 2:25 下午
  * description:
  */
-class AidlBinderActivity:BaseActivity() {
+class AidlBinderActivity: BaseActivity() {
     private val TAG = "BinderSimple"
     private var mBinder: IDogManager? = null
 

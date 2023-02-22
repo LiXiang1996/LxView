@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_marginTop="49dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding = "20dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/login_tips_e03a42"
+            android:text="英雄联盟LPL职业联赛"
+            android:textStyle="bold"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/insert_player_info_et"
+                android:background="@drawable/rgbffffff_strokeef7300_r8"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:hint="请输入选手名称"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/insert_player_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:padding="@dimen/dp_4"
+                android:background="@color/login_click_tv_color_ef7300"
+                android:text="录入选手" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="5dp"
+                android:id="@+id/insert_player_call_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:padding="@dimen/dp_4"
+                android:background="@color/login_click_tv_color_ef7300"
+                android:text="召唤师" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/delete_player_info_et"
+                android:background="@drawable/rgbffffff_strokeef7300_r8"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:hint="请输入选手名称"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/delete_player_info_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:padding="@dimen/dp_4"
+                android:background="@color/login_click_tv_color_ef7300"
+                android:text="删除选手" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/star_team_bt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="开始分队" />
+
+
+        <Button
+            android:id="@+id/query_players_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="查看选手池" />
+
+        <Button
+            android:id="@+id/delete_all_players_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="删除数据" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="参赛选手列表"
+                    android:textSize="18sp"
+                    android:textColor="@color/color_zhifubao"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    />
+                <View
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="260dp"
+                    android:background="@color/color_grey_999999"
+                    android:layout_height="1dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/join_game_player_rv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/activity_game_team_item_layout"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/login_click_tv_color_ef7300"
+                        android:text="直男队"/>
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_fire"
+                        android:layout_gravity="center"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/login_click_tv_color_ef7300"
+                        android:text="深情队"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/team_player_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_40"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

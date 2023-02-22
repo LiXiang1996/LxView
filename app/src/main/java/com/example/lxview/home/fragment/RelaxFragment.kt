@@ -1,6 +1,7 @@
 package com.example.lxview.home.fragment
 
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.appcompat.widget.AppCompatTextView
 import com.example.baselib.utils.ToastUtils
 import com.example.lxview.R
 import com.example.lxview.base.fragment.BaseFragment
@@ -13,12 +14,11 @@ import com.example.lxview.base.fragment.BaseFragment
 class RelaxFragment: BaseFragment() {
     override val contentId: Int
         get() = R.layout.fg_relax
-    private var iconDrawable: AppCompatImageView?=null
+    private var iconDrawable: AppCompatTextView?=null
 
 
     override fun initView() {
         iconDrawable = mRootView.findViewById(R.id.fg_relax_img)
-
     }
 
     override fun initListener() {

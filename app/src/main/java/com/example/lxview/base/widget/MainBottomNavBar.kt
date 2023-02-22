@@ -22,7 +22,6 @@ class MainBottomNavBar @JvmOverloads constructor(context: Context, attrs: Attrib
     init {
         initView()
     }
-
     private fun initView() {
         View.inflate(context, R.layout.main_act_bottom_nav_bar, this)
         videoContainer = findViewById(R.id.act_main_bottom_nav_ll)
@@ -47,11 +46,7 @@ class MainBottomNavBar @JvmOverloads constructor(context: Context, attrs: Attrib
         navMe.setOnClickListener {
             listener?.click(4)
         }
-
     }
-
-
-
 }
 
 interface ResultClick{

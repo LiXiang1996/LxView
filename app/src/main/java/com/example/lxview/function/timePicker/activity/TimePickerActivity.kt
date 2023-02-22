@@ -16,7 +16,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.lifecycle.LifecycleOwner
 import com.example.lxview.R
-import com.example.lxview.base.BaseActivity
+import com.example.lxview.base.activity.BaseActivity
 import com.example.lxview.function.jetpack.lifecycle.sample.LifecycleHandler
 import com.example.lxview.function.timePicker.listener.OnTimeSelectListener
 import com.example.lxview.function.timePicker.utils.IMTrailerTimePickerUtils

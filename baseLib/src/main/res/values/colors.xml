@@ -126,5 +126,18 @@
     <color name="color_4d">#4d4d4d</color>
     <color name="color_orange">#E0FF6100</color>
     <color name="primaryColor">#040408</color>
+    <color name="blue_weilan">#70f3ff</color>//蔚蓝
+    <color name="blue_pure">#44cef6</color>//蓝
+    <color name="blue_bilan">#3eedef</color>//碧蓝
+    <color name="blue_4b5cc4">#4b5cc4</color>//宝蓝
+    <color name="blue_a1afc9">#a1afc9</color>//蓝灰色
+    <color name="blue_2e4e7e">#2e4e7e</color>//藏青色
+    <color name="blue_4a4266">#4a4266</color>//黛
+    <color name="blue_426666">#426666</color>//黛绿
+    <color name="blue_065279">#3eedef</color>//靛蓝
+    <color name="blue_1685a9">#1685a9</color>//石青
+    <color name="blue_177cb0">#177cb0</color>//靛青
+    <color name="blue_003472">#003472</color>//花青
+
 
 </resources>

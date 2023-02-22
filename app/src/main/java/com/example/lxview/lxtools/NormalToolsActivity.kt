@@ -5,13 +5,14 @@ import androidx.appcompat.widget.AppCompatTextView
 import com.example.baselib.utils.startAct
 import com.example.lxview.R
 import com.example.lxview.function.myFreeView.activity.SampleActivity
-import com.example.lxview.base.BaseActivity
+import com.example.lxview.base.activity.BaseActivity
 import com.example.lxview.base.activity.SampleDialogAndPopActivity
 import com.example.lxview.function.home.activity.ShareFunctionActivity
 import com.example.lxview.function.ipc.binder.AidlBinderActivity
 import com.example.lxview.function.ipc.messager.client.MessengerActivity
 import com.example.lxview.function.jetpack.MyJetPackActivity
 import com.example.lxview.function.listTimestamp.activity.ListTimeActivity
+import com.example.lxview.function.listswip.listviewdeletedemo.ListSwipMainActivity
 import com.example.lxview.function.timePicker.activity.TimePickerActivity
 
 /**
@@ -28,6 +29,8 @@ class NormalToolsActivity : BaseActivity() {
     var tv5: AppCompatTextView? = null
     private var tv6: AppCompatTextView? = null
     private var tv7: AppCompatTextView? = null
+    private var tv8: AppCompatTextView? = null
+    private var tv9: AppCompatTextView? = null
     var tvJetPackModule: AppCompatTextView? = null
     override val contentId: Int
         get() = R.layout.home_activity_layout
@@ -41,6 +44,8 @@ class NormalToolsActivity : BaseActivity() {
         tv5 = findViewById(R.id.home_system_date_picker)
         tv6 = findViewById(R.id.home_function)
         tv7 = findViewById(R.id.home_dialog_and_pop)
+        tv8 = findViewById(R.id.home_dialog_listview)
+        tv8 = findViewById(R.id.home_dialog_listview)
         tvJetPackModule = findViewById(R.id.home_jetpack)
     }
 
@@ -71,6 +76,12 @@ class NormalToolsActivity : BaseActivity() {
         }
         tv7?.setOnClickListener {
             this.startActivity(Intent(this, SampleDialogAndPopActivity::class.java))
+        }
+        tv8?.setOnClickListener {
+            this.startActivity(Intent(this, ListSwipMainActivity::class.java))
+        }
+        tv9?.setOnClickListener {
+            this.startActivity(Intent(this, ListSwipMainActivity::class.java))
         }
         tvJetPackModule?.setOnClickListener {
             startAct<MyJetPackActivity>()

@@ -12,9 +12,8 @@ import com.example.lxview.base.activity.BaseDataBindActivity
 
 import com.example.lxview.base.ext.throttle
 import com.example.lxview.databinding.ActivitySettingUserinfoBinding
-import com.example.lxview.home.MainActivity
+import com.example.lxview.MainActivity
 import com.example.lxview.login.LXConstant
-import com.example.lxview.login.data.RegisterUserInfoBean
 
 
 /**

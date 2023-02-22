@@ -32,7 +32,8 @@ android {
 
     sourceSets{
         main{
-            res.srcDirs = ['src/main/res','src/main/res_share','src/main/res_login']
+            res.srcDirs = ['src/main/res','src/main/res_share','src/main/res_login','src/main/res_list_swip','src/main/res_function',
+                           'src/main/res_anim']
         }
     }
 
@@ -74,6 +75,7 @@ dependencies {
 // alternatively, just LiveData
     implementation "android.arch.lifecycle:livedata:1.1.1"
 
+
     def nav_version = "2.3.2"
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
@@ -86,12 +88,9 @@ dependencies {
     api 'com.squareup.retrofit2:converter-scalars:2.1.0'
     api 'com.squareup.okhttp3:logging-interceptor:4.9.3'
     api 'com.google.code.gson:gson:2.8.9'
-//    // 基础依赖包，必须要依赖
-//    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
-//    // fragment快速实现（可选）
-//    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
-//    // kotlin扩展（可选）
-//    implementation 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'
+    // 基础依赖包，必须要依赖
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+
 
     implementation project(':wheelview')
     implementation project(':shareLib')

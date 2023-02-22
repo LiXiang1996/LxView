@@ -4,136 +4,181 @@
     android:layout_width="match_parent"
     android:background="@color/activity_color"
     android:layout_height="match_parent">
-
-    <LinearLayout
-        android:id="@+id/home_ll"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="12dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:clickable="true"
+        android:layout_height="match_parent">
 
 
-        <TextView
-            android:id="@+id/login_tv_title"
+        <LinearLayout
+            android:id="@+id/home_ll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="祥菜鸡的小世界"
-            android:textColor="@color/login_title_color_c8c8c8"
-            android:textSize="40sp"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="滴滴滴"
-            android:textColor="#8F9092"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@+id/login_tv_title" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_define_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/rgbef7300_r8"
-            android:padding="@dimen/dp_10"
-            android:text="自定义View" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_define_loading"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:background="@drawable/rgbef7300_r8"
-            android:padding="@dimen/dp_10"
-            android:text="自定义Loading" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_define_time_picker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/rgbef7300_r8"
-            android:padding="@dimen/dp_10"
-            android:text="自定义TimePicker" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_system_time_picker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/rgbef7300_r8"
-            android:padding="@dimen/dp_10"
-            android:text="Messenger" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_system_date_picker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center"
-
-            android:background="@drawable/rgbef7300_r8"
-            android:padding="@dimen/dp_10"
-            android:text="AIDLBinder" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_function"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/rgbef7300_r8"
-            android:padding="@dimen/dp_10"
-            android:text="Sharepop" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_dialog_and_pop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/rgbef7300_r8"
-            android:padding="@dimen/dp_10"
-            android:text="各类弹窗" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/home_jetpack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center"
-
-            android:background="@drawable/rgbef7300_r8"
-            android:padding="@dimen/dp_10"
-            android:text="JetPack基础使用" />
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/login_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="祥菜鸡的小世界"
+                android:textColor="@color/login_title_color_c8c8c8"
+                android:textSize="40sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="滴滴滴"
+                android:textColor="#8F9092"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/login_tv_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_define_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="自定义View" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_define_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="自定义Loading" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_define_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="自定义TimePicker" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_system_time_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="Messenger" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_system_date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="AIDLBinder" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="Sharepop" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_dialog_and_pop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="各类弹窗" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_jetpack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="JetPack基础使用" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_dialog_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="ListView的侧滑" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="动画" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/home_content_provider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:background="@drawable/rgbef7300_r8"
+                android:padding="@dimen/dp_10"
+                android:text="ContentProvider" />
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

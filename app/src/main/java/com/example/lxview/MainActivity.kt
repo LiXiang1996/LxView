@@ -1,14 +1,16 @@
-package com.example.lxview.home
+package com.example.lxview
 
+import android.view.KeyEvent
+import android.view.MotionEvent
 import android.widget.FrameLayout
-import com.example.lxview.R
-import com.example.lxview.base.BaseActivity
+import com.example.lxview.base.activity.BaseActivity
 import com.example.lxview.base.fragment.BaseFragment
 import com.example.lxview.base.widget.MainBottomNavBar
 import com.example.lxview.home.fragment.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.lxview.base.widget.ResultClick
+import kotlin.system.exitProcess
 
 
 /**
@@ -16,13 +18,14 @@ import com.example.lxview.base.widget.ResultClick
  * date:   2022/3/31 1:57 下午
  * description:
  */
-class MainActivity :BaseActivity(),ResultClick{
+class MainActivity : BaseActivity(), ResultClick {
     override val contentId: Int
         get() = R.layout.activity_main
 
     private var indicatorView: MainBottomNavBar? = null
     private lateinit var fragments: Array<BaseFragment>
-    private lateinit var curSelectId: String
+    private var curSelectId: Int = 0
+    private var lastSelectId: Int = 0
     private lateinit var homeFragment: HomeFragment
     private lateinit var toolsFragment: ToolsFragment
     private lateinit var relaxFragment: RelaxFragment
@@ -32,7 +35,6 @@ class MainActivity :BaseActivity(),ResultClick{
 
 
     override fun initView() {
-
         indicatorView = findViewById(R.id.navigation)
         indicatorView?.listener = this
         container = findViewById(R.id.fragment_container)
@@ -41,16 +43,15 @@ class MainActivity :BaseActivity(),ResultClick{
         relaxFragment = RelaxFragment()
         meFragment = MineFragment()
         playFragment = PlayFragment()
-        curSelectId = homeFragment.id.toString()
+        curSelectId = 0
+        lastSelectId = 0
         fragments = arrayOf(homeFragment, toolsFragment, playFragment, relaxFragment, meFragment)
         fragments.forEach {
-            addFragment(it,it.tag.toString())
+            addFragment(it, it.tag.toString())
+            hideFragment(it)
         }
-        showFragment(homeFragment)
-
+        showFragment(fragments[0])
     }
-
-
 
 
     //添加Fragment到FragmentList中
@@ -61,11 +62,20 @@ class MainActivity :BaseActivity(),ResultClick{
         transaction.commit()
     }
 
-    // 清空fragmentList的所有Fragment，替换成新的Fragment，注意Fragment里面的坑
+    // 清空fragmentList的所有Fragment，替换成新的Fragment，注意Fragment里面的坑,这儿会重建fragmrnt
     private fun replaceFragment(fragment: Fragment, tag: String) {
         val fragmentManager = supportFragmentManager
         val transaction: FragmentTransaction = fragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, fragment, tag)
+        transaction.show(fragment)
+        transaction.commit()
+    }
+
+    private fun showAndHideFragment(fragment1: Fragment, fragment2: Fragment) {
+        val fragmentManager = supportFragmentManager
+        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+        transaction.hide(fragment1)
+        transaction.show(fragment2)
         transaction.commit()
     }
 
@@ -110,7 +120,9 @@ class MainActivity :BaseActivity(),ResultClick{
     }
 
     override fun click(int: Int) {
-        replaceFragment(fragments[int],fragments[int].tag.toString())
+        curSelectId = int
+        showAndHideFragment(fragments[lastSelectId], fragments[curSelectId]) //        replaceFragment(fragments[int], fragments[int].tag.toString())
+        lastSelectId = curSelectId
     }
 
 }

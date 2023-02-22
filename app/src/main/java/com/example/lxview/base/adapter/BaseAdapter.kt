@@ -6,18 +6,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
-import com.example.baselib.utils.startAct
 import com.example.lxview.R
+import com.example.lxview.base.route.RoutePath
 import com.example.lxview.function.home.bean.ItemBean
-import com.example.lxview.home.MainActivity
 
 /**
  * author: 李 祥
  * date:   2022/4/13 3:00 下午
  * description:
  */
-class BaseAdapter(layoutId:Int,recyclerView: RecyclerView): BaseQuickAdapter<ItemBean, BaseViewHolder>(layoutId, mutableListOf()) {
-
+class BaseAdapter(layoutId:Int): BaseQuickAdapter<ItemBean, BaseViewHolder>(layoutId, mutableListOf()) {
 
     override fun convert(helper: BaseViewHolder, item: ItemBean?) {
         val icon:AppCompatImageView = helper.getView(R.id.item_home_func_img)
@@ -25,7 +23,7 @@ class BaseAdapter(layoutId:Int,recyclerView: RecyclerView): BaseQuickAdapter<Ite
         Glide.with(mContext).load(item?.avatarRes).error(R.drawable.yang_7).into(icon)
         title.text = item?.title
         helper.itemView.setOnClickListener{
-            mContext.startAct(item?.tag2 ?: "MainActivity")
+            RoutePath.jumpAct(helper.itemView.context,item?.route)
         }
     }
 

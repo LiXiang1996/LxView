@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nav_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="ViewPager+RadioGroup+Fragment"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/fragment_container_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/nav_radiogroup"
+            android:layout_below="@id/nav_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_above="@id/nav_radiogroup"
+            android:background="@color/tab_color_false" />
+
+        <RadioGroup
+            android:id="@+id/nav_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/nav_radio_button_1"
+                style="@style/radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/food_avocado"
+                android:text="首页"
+                android:textColor="@drawable/selector_main_rb_text_color" />
+
+            <RadioButton
+                android:id="@+id/nav_radio_button_2"
+                style="@style/radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/food_bread"
+                android:text="游戏"
+                android:textColor="@drawable/selector_main_rb_text_color" />
+
+            <RadioButton
+                android:id="@+id/nav_radio_button_3"
+                style="@style/radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/food_cake"
+                android:text="学习"
+                android:textColor="@drawable/selector_main_rb_text_color" />
+
+            <RadioButton
+                android:id="@+id/nav_radio_button_4"
+                style="@style/radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/food_eggyolkcake"
+                android:text="放松"
+                android:textColor="@drawable/selector_main_rb_text_color" />
+
+            <RadioButton
+                android:id="@+id/nav_radio_button_5"
+                style="@style/radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/food_cookie"
+                android:text="我的"
+                android:textColor="@drawable/selector_main_rb_text_color" />
+        </RadioGroup>
+    </RelativeLayout>
+</layout>

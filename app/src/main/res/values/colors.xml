@@ -10,7 +10,8 @@
     <color name="im_msg_bg_green">#FF3EC093</color>
     <color name="zhifubao">#027AFF</color>
 
-
+    <!-- 暗灰色 -->
+    <color name="dimgrey">#E22F2F</color>
 
     <color name="color_3d3d3d">#3d3d3d</color>
     <color name="white">#ffffff</color>

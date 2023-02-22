@@ -180,7 +180,7 @@ object GlideUtils {
      * 加载高斯模糊
      */
     fun loadUrlImageGS(context: Context, url: String, imageView: ImageView) {
-        val multi = MultiTransformation<Bitmap>(Blur(200))
+        val multi = MultiTransformation<Bitmap>(Blur(10))
         val options = RequestOptions().placeholder(R.drawable.ic_glide_place_img).error(R.drawable.ic_glide_place_img).skipMemoryCache(true)
         try {
             Glide.with(context).load(url).apply(options).apply(bitmapTransform(multi)).into(imageView)

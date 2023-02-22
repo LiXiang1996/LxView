@@ -33,7 +33,7 @@ class CertificatesFragment : BaseFragment() {
             this.name = "李 祥"
             this.account = "510521199606261038"
             this.title = "身份证"
-            this.tag2 = RoutePath.MainApp.TOOLS_NORMAL
+            this.route = RoutePath.MainApp.TOOLS_NORMAL
             this.itemType = 2
             this.clickText1 = "查看证件照"
         })

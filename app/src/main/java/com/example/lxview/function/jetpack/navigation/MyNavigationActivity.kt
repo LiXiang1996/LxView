@@ -2,7 +2,7 @@ package com.example.lxview.function.jetpack.navigation
 
 import androidx.navigation.Navigation
 import com.example.lxview.R
-import com.example.lxview.base.BaseActivity
+import com.example.lxview.base.activity.BaseActivity
 
 
 
@@ -12,7 +12,7 @@ import com.example.lxview.base.BaseActivity
  * date:   2022/2/16 6:24 下午
  * description:
  */
-class MyNavigationActivity:BaseActivity() {
+class MyNavigationActivity: BaseActivity() {
     override val contentId: Int
         get() = R.layout.navigation_layout
 

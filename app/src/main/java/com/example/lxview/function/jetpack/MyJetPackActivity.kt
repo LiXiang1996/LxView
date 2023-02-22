@@ -3,7 +3,7 @@ package com.example.lxview.function.jetpack
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.baselib.utils.startAct
 import com.example.lxview.R
-import com.example.lxview.base.BaseActivity
+import com.example.lxview.base.activity.BaseActivity
 import com.example.lxview.function.jetpack.lifecycle.MyLifeCycleActivity
 import com.example.lxview.function.jetpack.navigation.MyNavigationActivity
 

@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * @author: JayQiu
  * @date: 2022/2/22
- * @description:
+ * @description: 验证码控件
  */
 public class VerifyEditText extends LinearLayout {
     private final static String TYPE_PHONE = "phone";

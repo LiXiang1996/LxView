@@ -32,7 +32,8 @@
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LxView">
+        android:theme="@style/Theme.LxView"
+        >
 
         <meta-data
             android:name="android.max_aspect"
@@ -50,8 +51,8 @@
         <activity android:name=".lxtools.NormalToolsActivity" />
 
         <activity
-            android:name=".home.MainActivity"
-            android:launchMode="singleTask"></activity>
+            android:name=".MainActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".function.loading.activity.IndicatorActivity" />
         <activity android:name="com.example.lxview.function.myFreeView.ViewGroup.MyViewGroupActivity" />
         <activity android:name="com.example.lxview.function.myFreeView.activity.ExOneActivity" />
@@ -68,6 +69,8 @@
         <activity android:name="com.example.lxview.function.ipc.messager.client.MessengerActivity" />
         <activity android:name=".base.activity.BaseDataBindActivity" />
         <activity android:name=".base.activity.BaseBindActivity" />
+        <activity android:name=".lxhome.activity.SQLiteActivity" />
+        <activity android:name=".lxhome.activity.GameTeamActivity" />
 
         <activity android:name=".login.activity.LoginActivity" />
         <activity android:name=".login.activity.LoginChangePasswordActivity" />
@@ -77,23 +80,40 @@
         <activity android:name=".login.activity.LoginInviteCodeActivity" />
         <activity android:name=".login.activity.LoginRegisterActivity" />
         <activity android:name=".login.activity.LoginWelcomeBackActivity" />
+        <activity android:name=".lxhome.activity.WebViewActivity" />
+
 
         <!--        首页-->
         <activity android:name=".lxhome.activity.CardBagActivity" />
         <activity android:name=".lxhome.activity.AccountsTotalActivity" />
+        <activity android:name=".function.listswip.listviewdeletedemo.ActivityExpandableListViewDelete"/>
+        <activity android:name=".function.listswip.listviewdeletedemo.ListSwipMainActivity"/>
+        <activity android:name=".function.listswip.listviewdeletedemo.ActivityListViewDelete"/>
+        <activity android:name=".lxhome.activity.NavListActivity"/>
+        <activity android:name=".lxhome.func.nav.activity.NavMenuActivity"/>
+        <activity android:name=".lxhome.activity.ImgListActivity"/>
+        <activity android:name=".lxhome.img.ImgAnimationActivity"/>
+        <activity android:name=".lxhome.img.ImgShapeActivity"/>
+        <activity android:name=".lxhome.func.nav.activity.NavViewPagerRadioGroupActivity"/>
+        <activity android:name=".lxhome.func.nav.activity.NavViewPagerTabActivity"/>
+        <activity android:name=".lxusercenter.activity.HandlerActivity"/>
+        <activity android:name=".function.animation.activity.AnimationGoActivity"/>
+        <activity android:name=".function.animation.activity.FrameAnimationActivity"/>
+        <activity android:name=".function.animation.activity.TweenAnimationActivity"/>
+
 
 
         <service
             android:name=".RemoteService"
             android:enabled="true"
             android:exported="true"
-            android:process=":remote"></service>
+            android:process=":remote" />
 
         <service
             android:name="com.example.lxview.function.ipc.messager.service.MessengerService"
             android:enabled="true"
             android:exported="true"
-            android:process=":remote"></service>
+            android:process=":remote" />
     </application>
 
 </manifest>

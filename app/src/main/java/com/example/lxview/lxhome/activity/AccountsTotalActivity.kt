@@ -4,8 +4,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.baselib.utils.ToastUtils
 import com.example.lxview.R
-import com.example.lxview.base.BaseActivity
-import com.example.lxview.base.activity.Base2Activity
 import com.example.lxview.base.activity.BaseBindActivity
 import com.example.lxview.base.adapter.BaseItemTypeAdapter
 import com.example.lxview.base.route.RoutePath
@@ -51,7 +49,7 @@ class AccountsTotalActivity: BaseBindActivity<ActivityAccountTotalLayoutBinding>
             this.account = "2459141797"
             this.password = "okokokok9"
             this.title = "QQ号"
-            this.tag2 = RoutePath.MainApp.TOOLS_NORMAL
+            this.route = RoutePath.MainApp.TOOLS_NORMAL
             this.itemType = 3
             this.clickText1 = "查看证件照"
         })
