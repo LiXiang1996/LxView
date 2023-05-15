@@ -1,4 +1,4 @@
-package com.example.lxview.function.myFreeView.addview;
+package com.example.lxview.function.myfreeview.addview;
 
 import android.content.Context;
 import android.os.Bundle;

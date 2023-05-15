@@ -19,11 +19,13 @@ class MineFragment: BaseFragment() {
         get() = R.layout.user_fragment_user_info
     private var iconDrawable: AppCompatImageView?=null
     private var myThread: LineControlView?=null
+    private var myUITest: LineControlView?=null
 
 
     override fun initView() {
         iconDrawable = mRootView.findViewById(R.id.mUserInfoHeadPic)
         myThread = mRootView.findViewById(R.id.mUserCenterMyFavorites)
+        myUITest = mRootView.findViewById(R.id.mUserCenterFeedBackAndHelp)
 
     }
 
@@ -33,6 +35,9 @@ class MineFragment: BaseFragment() {
         }
         myThread?.setOnClickListener {
             startAct<HandlerActivity>()
+        }
+        myUITest?.setOnClickListener {
+
         }
     }
 }

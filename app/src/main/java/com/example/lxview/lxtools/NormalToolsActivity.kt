@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.baselib.utils.startAct
 import com.example.lxview.R
-import com.example.lxview.function.myFreeView.activity.SampleActivity
+import com.example.lxview.function.myfreeview.activity.SampleActivity
 import com.example.lxview.base.activity.BaseActivity
 import com.example.lxview.base.activity.SampleDialogAndPopActivity
 import com.example.lxview.function.home.activity.ShareFunctionActivity

@@ -1,4 +1,4 @@
-package com.example.lxview.function.myFreeView.ViewGroup;
+package com.example.lxview.function.myfreeview.ViewGroup;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;

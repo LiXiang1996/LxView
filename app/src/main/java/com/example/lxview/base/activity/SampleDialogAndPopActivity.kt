@@ -111,6 +111,7 @@ class SampleDialogAndPopActivity : BaseActivity() {
             ViewLoading.show(this, "Loading", true)
         }
 
+        //实用dialog
         pictureLoadingTv?.setOnClickListener {
             val picDialog= PictureDialog(it.context)
             picDialog.show()

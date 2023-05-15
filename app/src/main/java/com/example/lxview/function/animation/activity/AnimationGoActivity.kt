@@ -10,9 +10,7 @@ import com.example.lxview.function.home.activity.ShareFunctionActivity
 import com.example.lxview.function.ipc.binder.AidlBinderActivity
 import com.example.lxview.function.ipc.messager.client.MessengerActivity
 import com.example.lxview.function.jetpack.MyJetPackActivity
-import com.example.lxview.function.listTimestamp.activity.ListTimeActivity
 import com.example.lxview.function.listswip.listviewdeletedemo.ListSwipMainActivity
-import com.example.lxview.function.myFreeView.activity.SampleActivity
 import com.example.lxview.function.timePicker.activity.TimePickerActivity
 
 /**

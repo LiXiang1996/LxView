@@ -12,5 +12,10 @@
     <com.example.lxview.base.dialog.view.PictureSpinView
         android:layout_width="30dp"
         android:layout_height="30dp" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        android:layout_marginTop="15dp"/>
 
 </LinearLayout>

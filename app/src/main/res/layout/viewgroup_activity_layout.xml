@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     >
 
-    <com.example.lxview.function.myFreeView.ViewGroup.MyViewGroup
+    <com.example.lxview.function.myfreeview.ViewGroup.MyViewGroup
         android:id="@+id/my_view_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,6 +34,6 @@
             android:background="@color/im_msg_bg_green"
             />
 
-    </com.example.lxview.function.myFreeView.ViewGroup.MyViewGroup>
+    </com.example.lxview.function.myfreeview.ViewGroup.MyViewGroup>
 
 </LinearLayout>

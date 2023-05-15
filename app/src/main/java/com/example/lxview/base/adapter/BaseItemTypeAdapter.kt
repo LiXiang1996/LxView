@@ -62,6 +62,11 @@ class BaseItemTypeAdapter(data: List<ItemBean?>?) : BaseMultiItemQuickAdapter<It
                 text1.text = item?.clickText1
                 text2.text = item?.clickText2
             }
+            4->{
+                val avatar = helper.getView<AppCompatImageView>(R.id.im_item_admin_avatar)
+                val name = helper.getView<AppCompatTextView>(R.id.im_item_admin_username)
+                name.text = item?.name
+            }
         }
     }
 
@@ -75,5 +80,7 @@ class BaseItemTypeAdapter(data: List<ItemBean?>?) : BaseMultiItemQuickAdapter<It
         addItemType(1, R.layout.item_layout_normal)
         addItemType(2, R.layout.item_layout_certificates)
         addItemType(3, R.layout.item_layout_account)
+        addItemType(4, R.layout.list_item_common)
+
     }
 }

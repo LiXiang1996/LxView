@@ -2,7 +2,6 @@ package com.example.lxview.base.adapter
 
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
@@ -15,7 +14,7 @@ import com.example.lxview.function.home.bean.ItemBean
  * date:   2022/4/13 3:00 下午
  * description:
  */
-class BaseAdapter(layoutId:Int): BaseQuickAdapter<ItemBean, BaseViewHolder>(layoutId, mutableListOf()) {
+class HomeFucAdapter(layoutId:Int): BaseQuickAdapter<ItemBean, BaseViewHolder>(layoutId, mutableListOf()) {
 
     override fun convert(helper: BaseViewHolder, item: ItemBean?) {
         val icon:AppCompatImageView = helper.getView(R.id.item_home_func_img)

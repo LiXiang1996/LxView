@@ -54,9 +54,9 @@
             android:name=".MainActivity"
             android:launchMode="singleTask" />
         <activity android:name=".function.loading.activity.IndicatorActivity" />
-        <activity android:name="com.example.lxview.function.myFreeView.ViewGroup.MyViewGroupActivity" />
-        <activity android:name="com.example.lxview.function.myFreeView.activity.ExOneActivity" />
-        <activity android:name="com.example.lxview.function.myFreeView.activity.SampleActivity" />
+        <activity android:name="com.example.lxview.function.myfreeview.ViewGroup.MyViewGroupActivity" />
+        <activity android:name="com.example.lxview.function.myfreeview.activity.ExOneActivity" />
+        <activity android:name="com.example.lxview.function.myfreeview.activity.SampleActivity" />
         <activity android:name="com.example.lxview.function.listTimestamp.activity.ListTimeActivity" />
         <activity android:name="com.example.lxview.function.timePicker.activity.TimePickerActivity" />
         <activity android:name=".function.home.activity.ShareFunctionActivity" />

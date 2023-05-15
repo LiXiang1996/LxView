@@ -1,23 +1,11 @@
 package com.example.lxview.function.animation.activity
 
-import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import android.widget.ImageView
-import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.ContextCompat
-import com.example.baselib.utils.startAct
 import com.example.lxview.R
 import com.example.lxview.base.activity.BaseActivity
-import com.example.lxview.base.activity.SampleDialogAndPopActivity
-import com.example.lxview.function.home.activity.ShareFunctionActivity
-import com.example.lxview.function.ipc.binder.AidlBinderActivity
-import com.example.lxview.function.ipc.messager.client.MessengerActivity
-import com.example.lxview.function.jetpack.MyJetPackActivity
-import com.example.lxview.function.listTimestamp.activity.ListTimeActivity
-import com.example.lxview.function.listswip.listviewdeletedemo.ListSwipMainActivity
-import com.example.lxview.function.myFreeView.activity.SampleActivity
-import com.example.lxview.function.timePicker.activity.TimePickerActivity
 
 /**
  * author: 李 祥

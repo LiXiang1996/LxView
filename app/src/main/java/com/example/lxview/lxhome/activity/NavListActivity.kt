@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lxview.R
 import com.example.lxview.base.activity.BaseBindActivity
-import com.example.lxview.base.adapter.BaseAdapter
+import com.example.lxview.base.adapter.HomeFucAdapter
 import com.example.lxview.base.route.RoutePath
 import com.example.lxview.databinding.BaseListActivityLayoutBinding
 import com.example.lxview.function.home.bean.ItemBean
@@ -17,7 +17,7 @@ import com.example.lxview.function.home.bean.ItemBean
 class NavListActivity : BaseBindActivity<BaseListActivityLayoutBinding>() {
 
     var recyclerView: RecyclerView? = null
-    var listAdapter: BaseAdapter? = null
+    var listAdapter: HomeFucAdapter? = null
     override val layout: Int
         get() = R.layout.base_list_activity_layout
 
@@ -25,7 +25,7 @@ class NavListActivity : BaseBindActivity<BaseListActivityLayoutBinding>() {
     override fun initView() {
         recyclerView = findViewById(R.id.base_list_rv)
         recyclerView?.layoutManager = LinearLayoutManager(this)
-        listAdapter = BaseAdapter(R.layout.item_layout_home_func)
+        listAdapter = HomeFucAdapter(R.layout.item_layout_home_func)
         recyclerView?.adapter = listAdapter
     }
 

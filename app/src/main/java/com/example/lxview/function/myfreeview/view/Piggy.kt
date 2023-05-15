@@ -1,4 +1,4 @@
-package com.example.lxview.function.myFreeView.View
+package com.example.lxview.function.myfreeview.view
 
 import android.content.Context
 import android.graphics.Canvas

@@ -5,7 +5,6 @@ import android.annotation.SuppressLint
 import android.content.res.AssetManager
 import android.media.MediaPlayer
 import android.text.InputFilter
-import android.text.method.DigitsKeyListener
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
 import android.widget.EditText
@@ -15,7 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.lxview.R
-import com.example.lxview.base.adapter.BaseAdapter
+import com.example.lxview.base.adapter.HomeFucAdapter
 import com.example.lxview.base.adapter.RequestListDelegate
 import com.example.lxview.base.adapter.RequestListHelper
 import com.example.lxview.base.fragment.BaseFragment
@@ -39,7 +38,7 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
     private var recycleViewMain: RecyclerView? = null
     private var recycleViewSecond: RecyclerView? = null
     private val requestListHelper = RequestListHelper(this)
-    private var recycleViewSecondAdapter: BaseAdapter? = null
+    private var recycleViewSecondAdapter: HomeFucAdapter? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var layoutManager2: RecyclerView.LayoutManager? = null
     private var searchEdit: EditText? = null
@@ -76,7 +75,7 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
 
         recycleViewSecond = mRootView.findViewById<RecyclerView>(R.id.home_second_rv)
         recycleViewSecond?.let {
-            recycleViewSecondAdapter = BaseAdapter(R.layout.item_layout_normal)
+            recycleViewSecondAdapter = HomeFucAdapter(R.layout.item_layout_normal)
             it.adapter = recycleViewSecondAdapter
         }
         layoutManager = GridLayoutManager(context, 4)
@@ -89,6 +88,7 @@ class HomeFragment : BaseFragment(), RequestListDelegate<ItemBean> {
         animtorAlpha?.interpolator = object : LinearInterpolator() {} //设置动画重复次数
         animtorAlpha?.repeatCount = 100 //旋转时长
         animtorAlpha?.duration = 36000 //开始旋转
+
 
 
     }

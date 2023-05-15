@@ -1,4 +1,4 @@
-package com.example.lxview.function.myFreeView.activity;
+package com.example.lxview.function.myfreeview.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
